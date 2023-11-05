@@ -133,7 +133,7 @@ script = ExtResource( 14 )
 [node name="CollapseSpriteContainer" type="Node2D" parent="Grid"]
 
 [node name="Boss" parent="Grid" instance=ExtResource( 11 )]
-position = Vector2( 994, 415 )
+position = Vector2( 901, 170 )
 type = 3
 enemy_type = 3
 

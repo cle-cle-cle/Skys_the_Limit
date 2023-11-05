@@ -1,5 +1,7 @@
 extends Node
 
+var max_level = 2
+
 # Level and steps
 export var current_level = 0
 var current_turn = 0
@@ -177,7 +179,11 @@ func _on_Actor_step_consumed():
 
 func _on_Grid_entered_stair():
 	# load next level
-	get_tree().change_scene("res://game/code_source/levels/Level_"+ String(current_level + 1) + ".tscn")
+	if current_level == max_level:
+		# load ending level
+		get_tree().change_scene("res://game/code_source/levels/Level_ending.tscn")
+	else:
+		get_tree().change_scene("res://game/code_source/levels/Level_"+ String(current_level + 1) + ".tscn")
 
 
 func start_new_turn():

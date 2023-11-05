@@ -160,7 +160,6 @@ type = 4
 texture = ExtResource( 12 )
 
 [node name="CollapseOrder" type="Node2D" parent="Grid"]
-visible = false
 
 [node name="1" type="Node2D" parent="Grid/CollapseOrder"]
 
