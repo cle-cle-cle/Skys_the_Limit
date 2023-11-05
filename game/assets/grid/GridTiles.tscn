@@ -1,0 +1,12 @@
+[gd_scene format=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Actor" type="Sprite" parent="."]
+position = Vector2( 32, 32 )
+
+[node name="Obstacle" type="Sprite" parent="."]
+position = Vector2( 96, 32 )
+
+[node name="Object" type="Sprite" parent="."]
+position = Vector2( 160, 32 )
