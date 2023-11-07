@@ -19,15 +19,17 @@ onready var actor = $Grid/Actor
 
 
 # UI
-onready var level_label = $CanvasLayer/LevelLabel
-onready var turn_label = $CanvasLayer/TurnLabel
+onready var level_label = $UI/LevelLabel
+onready var turn_label = $UI/TurnLabel
 #onready var restart_level_button = $CanvasLayer/RestartLevelButton
-onready var restart_game_button = $CanvasLayer/RestartGameButton
-onready var player_stats_v_box = $CanvasLayer/PlayerStatsVBox
+onready var restart_game_button = $UI/RestartGameButton
+onready var player_stats_h_box = $UI/PlayerStatsHBox
+onready var player_stats_v_box = $UI/PlayerStatsHBox/PlayerStatsVBox
 
 
-onready var game_over_label = $CanvasLayer/GameOverLabel
-onready var dialogue_container = $CanvasLayer/DialogueContainer
+
+onready var game_over_label = $UI/GameOverLabel
+onready var dialogue_container = $UI/DialogueContainer
 
 
 
@@ -91,7 +93,7 @@ func _ready():
 	if current_level == 0:
 		# hide all info at first, and show gradually
 		grid.hide()
-		player_stats_v_box.hide()
+		player_stats_h_box.hide()
 		turn_label.hide()
 #		restart_level_button.hide()
 		restart_game_button.hide()
@@ -99,7 +101,7 @@ func _ready():
 		play_conversation(tutorial_dialogue_1)
 		yield(self, "current_conversation_ended")
 		grid.show()
-		player_stats_v_box.show()
+		player_stats_h_box.show()
 		turn_label.show()
 		
 		play_conversation(tutorial_dialogue_2)
@@ -139,7 +141,7 @@ func _ready():
 		turn_label.hide()
 #		restart_level_button.hide()
 		restart_game_button.hide()
-		player_stats_v_box.hide()
+		player_stats_h_box.hide()
 		game_over_label.hide()
 		dialogue_container.hide()
 		
@@ -163,8 +165,8 @@ func _process(delta):
 
 # Update Level and Steps Labels
 func update_labels():
-	level_label.text = "LEVEL: " + String(current_level + 1) 
-	turn_label.text = "Until Next Collapse: " + String(remaining_steps)
+	level_label.text = "LEVEL " + String(current_level + 1) 
+	turn_label.text = String(remaining_steps) + " Steps"
 
 
 func _on_Actor_step_consumed():

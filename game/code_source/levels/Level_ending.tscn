@@ -1,7 +1,7 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://game/code_source/pawns/Actor.tscn" type="PackedScene" id=1]
-[ext_resource path="res://game/code_source/Dialogue.tscn" type="PackedScene" id=2]
+[ext_resource path="res://game/code_source/UI.tscn" type="PackedScene" id=2]
 [ext_resource path="res://game/code_source/grid/grid.gd" type="Script" id=3]
 [ext_resource path="res://game/code_source/level.gd" type="Script" id=4]
 [ext_resource path="res://game/assets/Rubik_Mono_One/RubikMonoOne-Regular.ttf" type="DynamicFontData" id=5]
@@ -9,104 +9,13 @@
 [ext_resource path="res://game/sounds/hitHurt.wav" type="AudioStream" id=7]
 [ext_resource path="res://game/assets/backgrounds/bg_3.png" type="Texture" id=8]
 [ext_resource path="res://game/sounds/pickupCoin.wav" type="AudioStream" id=9]
-[ext_resource path="res://game/assets/ladyangel_avatar.png" type="Texture" id=10]
 [ext_resource path="res://game/assets/bed.png" type="Texture" id=11]
 [ext_resource path="res://game/assets/seedling.png" type="Texture" id=12]
 [ext_resource path="res://game/sounds/melody.wav" type="AudioStream" id=13]
-[ext_resource path="res://game/code_source/player_stats_vbox.gd" type="Script" id=14]
 [ext_resource path="res://game/assets/grid/grid_tileset.tres" type="TileSet" id=15]
 
 [sub_resource type="DynamicFont" id=14]
 font_data = ExtResource( 5 )
-
-[sub_resource type="StyleBoxEmpty" id=5]
-
-[sub_resource type="DynamicFont" id=6]
-size = 24
-font_data = ExtResource( 5 )
-
-[sub_resource type="DynamicFont" id=2]
-size = 32
-font_data = ExtResource( 5 )
-
-[sub_resource type="DynamicFont" id=7]
-size = 20
-font_data = ExtResource( 5 )
-
-[sub_resource type="StyleBoxFlat" id=9]
-bg_color = Color( 1, 1, 1, 1 )
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
-border_color = Color( 0.211765, 0.305882, 0.666667, 1 )
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
-
-[sub_resource type="StyleBoxFlat" id=8]
-bg_color = Color( 1, 1, 1, 1 )
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
-
-[sub_resource type="DynamicFont" id=11]
-size = 32
-font_data = ExtResource( 5 )
-
-[sub_resource type="StyleBoxFlat" id=3]
-bg_color = Color( 0.8, 0.8, 0.8, 1 )
-
-[sub_resource type="StyleBoxFlat" id=4]
-
-[sub_resource type="DynamicFont" id=10]
-font_data = ExtResource( 5 )
-
-[sub_resource type="Animation" id=12]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath("EnterPrompt:rect_position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 1126, 85 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("EnterPrompt:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ) ]
-}
-
-[sub_resource type="Animation" id=13]
-resource_name = "wiggle"
-length = 0.5
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("EnterPrompt:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3, 0.5 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
-}
 
 [node name="Level_ending" type="Node"]
 script = ExtResource( 4 )
@@ -130,48 +39,6 @@ custom_fonts/font = SubResource( 14 )
 text = "Sky's the Limit
 Thanks for playing"
 align = 1
-
-[node name="PlayerStatsVBox" type="VBoxContainer" parent="."]
-margin_top = 104.0
-margin_right = 200.0
-margin_bottom = 404.0
-rect_min_size = Vector2( 0, 300 )
-script = ExtResource( 14 )
-
-[node name="Spacer" type="Panel" parent="PlayerStatsVBox"]
-margin_right = 200.0
-margin_bottom = 100.0
-rect_min_size = Vector2( 0, 100 )
-custom_styles/panel = SubResource( 5 )
-
-[node name="HP" type="Label" parent="PlayerStatsVBox"]
-margin_top = 104.0
-margin_right = 200.0
-margin_bottom = 135.0
-custom_fonts/font = SubResource( 6 )
-text = " HP:10"
-
-[node name="MaxHP" type="Label" parent="PlayerStatsVBox"]
-visible = false
-margin_top = 139.0
-margin_right = 200.0
-margin_bottom = 170.0
-custom_fonts/font = SubResource( 6 )
-text = " MAX HP:10"
-
-[node name="ATK" type="Label" parent="PlayerStatsVBox"]
-margin_top = 139.0
-margin_right = 200.0
-margin_bottom = 170.0
-custom_fonts/font = SubResource( 6 )
-text = " ATK:10"
-
-[node name="DEF" type="Label" parent="PlayerStatsVBox"]
-margin_top = 174.0
-margin_right = 200.0
-margin_bottom = 205.0
-custom_fonts/font = SubResource( 6 )
-text = " DEF:10"
 
 [node name="Grid" type="TileMap" parent="."]
 tile_set = ExtResource( 15 )
@@ -205,179 +72,8 @@ position = Vector2( 606, -1393 )
 [node name="Sprite" type="Sprite" parent="Grid/seedling"]
 texture = ExtResource( 12 )
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="LevelLabel" type="Label" parent="CanvasLayer"]
+[node name="UI" parent="." instance=ExtResource( 2 )]
 visible = false
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = -80.0
-margin_right = 80.0
-margin_bottom = 31.0
-custom_colors/font_color = Color( 0.192157, 0.192157, 0.192157, 1 )
-custom_fonts/font = SubResource( 6 )
-text = "Level:1 "
-
-[node name="TurnLabel" type="Label" parent="CanvasLayer"]
-visible = false
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = -348.0
-margin_top = 28.0
-margin_right = 354.0
-margin_bottom = 68.0
-custom_colors/font_color = Color( 0.192157, 0.192157, 0.192157, 1 )
-custom_fonts/font = SubResource( 2 )
-text = "Until Next Collapse: X"
-align = 1
-
-[node name="RestartLevelButton" type="Button" parent="CanvasLayer"]
-pause_mode = 2
-visible = false
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-margin_left = -250.0
-margin_top = -649.0
-margin_right = 250.0
-margin_bottom = -623.0
-rect_min_size = Vector2( 500, 20 )
-custom_colors/font_color_disabled = Color( 0.2, 0.2, 0.2, 1 )
-custom_colors/font_color_focus = Color( 0.2, 0.2, 0.2, 1 )
-custom_colors/font_color = Color( 0.2, 0.2, 0.2, 1 )
-custom_colors/font_color_hover = Color( 0.2, 0.2, 0.2, 1 )
-custom_colors/font_color_pressed = Color( 0.2, 0.2, 0.2, 1 )
-custom_fonts/font = SubResource( 7 )
-custom_styles/hover = SubResource( 9 )
-custom_styles/pressed = SubResource( 8 )
-custom_styles/focus = SubResource( 8 )
-custom_styles/disabled = SubResource( 8 )
-custom_styles/normal = SubResource( 8 )
-text = "Restart From This Level"
-
-[node name="RestartGameButton" type="Button" parent="CanvasLayer"]
-pause_mode = 2
-visible = false
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-margin_left = -251.0
-margin_top = -616.0
-margin_right = 249.0
-margin_bottom = -590.0
-rect_min_size = Vector2( 500, 20 )
-custom_colors/font_color_disabled = Color( 0.2, 0.2, 0.2, 1 )
-custom_colors/font_color_focus = Color( 0.2, 0.2, 0.2, 1 )
-custom_colors/font_color = Color( 0.2, 0.2, 0.2, 1 )
-custom_colors/font_color_hover = Color( 0.2, 0.2, 0.2, 1 )
-custom_colors/font_color_pressed = Color( 0.2, 0.2, 0.2, 1 )
-custom_fonts/font = SubResource( 7 )
-custom_styles/hover = SubResource( 9 )
-custom_styles/pressed = SubResource( 8 )
-custom_styles/focus = SubResource( 8 )
-custom_styles/disabled = SubResource( 8 )
-custom_styles/normal = SubResource( 8 )
-text = "Restart From 1st Level"
-
-[node name="GameOverLabel" type="Label" parent="CanvasLayer"]
-visible = false
-margin_left = 520.0
-margin_top = 141.0
-margin_right = 763.0
-margin_bottom = 181.0
-custom_colors/font_color = Color( 0.541176, 0.176471, 0.176471, 1 )
-custom_fonts/font = SubResource( 11 )
-text = "Game Over"
-
-[node name="PlayerStatsVBox" type="VBoxContainer" parent="CanvasLayer"]
-visible = false
-margin_top = 104.0
-margin_right = 200.0
-margin_bottom = 404.0
-rect_min_size = Vector2( 0, 300 )
-script = ExtResource( 14 )
-
-[node name="Spacer" type="Panel" parent="CanvasLayer/PlayerStatsVBox"]
-margin_right = 200.0
-margin_bottom = 100.0
-rect_min_size = Vector2( 0, 100 )
-custom_styles/panel = SubResource( 5 )
-
-[node name="HP" type="Label" parent="CanvasLayer/PlayerStatsVBox"]
-margin_top = 104.0
-margin_right = 200.0
-margin_bottom = 135.0
-custom_fonts/font = SubResource( 6 )
-text = " HP:10"
-
-[node name="MaxHP" type="Label" parent="CanvasLayer/PlayerStatsVBox"]
-visible = false
-margin_top = 139.0
-margin_right = 200.0
-margin_bottom = 170.0
-custom_fonts/font = SubResource( 6 )
-text = " MAX HP:10"
-
-[node name="ATK" type="Label" parent="CanvasLayer/PlayerStatsVBox"]
-margin_top = 174.0
-margin_right = 200.0
-margin_bottom = 205.0
-custom_fonts/font = SubResource( 6 )
-text = " ATK:10"
-
-[node name="DEF" type="Label" parent="CanvasLayer/PlayerStatsVBox"]
-margin_top = 209.0
-margin_right = 200.0
-margin_bottom = 240.0
-custom_fonts/font = SubResource( 6 )
-text = " DEF:10"
-
-[node name="DialogueContainer" type="PanelContainer" parent="CanvasLayer"]
-pause_mode = 2
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_vertical = 0
-rect_min_size = Vector2( 800, 128 )
-mouse_filter = 2
-custom_styles/panel = SubResource( 3 )
-
-[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/DialogueContainer"]
-margin_right = 128.0
-margin_bottom = 128.0
-rect_min_size = Vector2( 128, 128 )
-mouse_filter = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
-custom_styles/panel = SubResource( 4 )
-
-[node name="Sprite" type="Sprite" parent="CanvasLayer/DialogueContainer/PanelContainer"]
-scale = Vector2( 2, 2 )
-texture = ExtResource( 10 )
-offset = Vector2( 32, 32 )
-
-[node name="Dialogue" parent="CanvasLayer/DialogueContainer" instance=ExtResource( 2 )]
-text = ""
-
-[node name="EnterPrompt" type="Label" parent="CanvasLayer/DialogueContainer"]
-margin_left = 1126.0
-margin_top = 85.0
-margin_right = 1280.0
-margin_bottom = 128.0
-size_flags_horizontal = 8
-size_flags_vertical = 12
-custom_colors/font_color = Color( 0.329412, 0.329412, 0.329412, 1 )
-custom_fonts/font = SubResource( 10 )
-text = "Enter ->   
-"
-align = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/DialogueContainer"]
-autoplay = "wiggle"
-anims/RESET = SubResource( 12 )
-anims/wiggle = SubResource( 13 )
 
 [node name="AudioHit" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 7 )
@@ -391,6 +87,3 @@ stream = ExtResource( 6 )
 [node name="BGM" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 13 )
 autoplay = true
-
-[connection signal="pressed" from="CanvasLayer/RestartLevelButton" to="." method="_on_RestartButton_pressed"]
-[connection signal="pressed" from="CanvasLayer/RestartGameButton" to="." method="_on_RestartGameButton_pressed"]
