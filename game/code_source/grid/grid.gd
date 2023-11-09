@@ -4,6 +4,7 @@ enum { EMPTY = -1, ACTOR, UPGRADE, GROUND, ENEMY, STAIR, COLLAPSE }
 
 signal entered_stair
 
+onready var level = $".."
 onready var actor = $Actor
 onready var collapse_order = $CollapseOrder
 onready var collapse_sprite_container = $CollapseSpriteContainer
@@ -17,12 +18,18 @@ func _ready():
 	mark_collapsing_cell(0)
 
 
+
 # Map all pawn child nodes to tile grid
 func mark_pawns():
 	for child in get_children():
 		if "type" in child:
 			set_cellv(world_to_map(child.position), child.type)
+			if child is Enemy:
+				child.connect("mouse_entered_enemy", level, "_on_mouse_entered_enemy", [child])
 
+
+
+	
 
 # Mark collapsing cells of this turn, those cells will collpase before the next turn
 func mark_collapsing_cell(turn):
@@ -110,3 +117,6 @@ func collapse_ground(current_turn):
 func _on_Actor_landed_on_new_pos():
 	if get_cellv(world_to_map(actor.position)) == EMPTY:
 		actor.queue_free()
+
+
+

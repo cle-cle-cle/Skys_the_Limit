@@ -19,6 +19,7 @@ onready var actor = $Grid/Actor
 
 
 # UI
+onready var ui = $UI
 onready var level_label = $UI/LevelLabel
 onready var turn_label = $UI/TurnLabel
 #onready var restart_level_button = $CanvasLayer/RestartLevelButton
@@ -250,3 +251,8 @@ func _input(event):
 		if event.get_scancode() == KEY_ENTER or event.get_scancode() == KEY_SPACE:
 #			current_tween.set_speed_scale(10)
 			emit_signal("next_clicked")
+
+
+func _on_mouse_entered_enemy(enemy):
+	
+	ui.update_enemy_stats_box(enemy)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://game/assets/angel.png" type="Texture" id=1]
 [ext_resource path="res://game/code_source/player_stats_vbox.gd" type="Script" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://game/assets/Rubik_Mono_One/IBMPlexMono-SemiBold.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://game/assets/UI/stats_panel.png" type="Texture" id=7]
 [ext_resource path="res://game/assets/slime_green.png" type="Texture" id=8]
+[ext_resource path="res://game/code_source/UI.gd" type="Script" id=9]
 
 [sub_resource type="DynamicFont" id=6]
 size = 20
@@ -118,6 +119,7 @@ tracks/0/keys = {
 }
 
 [node name="UI" type="CanvasLayer"]
+script = ExtResource( 9 )
 
 [node name="LevelLabel" type="Label" parent="."]
 anchor_left = 0.5
@@ -350,33 +352,32 @@ margin_bottom = 300.0
 rect_min_size = Vector2( 20, 40 )
 custom_styles/panel = SubResource( 5 )
 
-[node name="PlayerStatsVBox" type="VBoxContainer" parent="EnemyStatsHBox"]
+[node name="EnemyStatsVBox" type="VBoxContainer" parent="EnemyStatsHBox"]
 margin_left = 79.0
 margin_right = 164.0
 margin_bottom = 300.0
-script = ExtResource( 2 )
 
-[node name="Spacer" type="Panel" parent="EnemyStatsHBox/PlayerStatsVBox"]
+[node name="Spacer" type="Panel" parent="EnemyStatsHBox/EnemyStatsVBox"]
 margin_right = 85.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 0, 40 )
 custom_styles/panel = SubResource( 5 )
 
-[node name="HP" type="Label" parent="EnemyStatsHBox/PlayerStatsVBox"]
+[node name="HP" type="Label" parent="EnemyStatsHBox/EnemyStatsVBox"]
 margin_top = 44.0
 margin_right = 85.0
 margin_bottom = 70.0
 custom_fonts/font = SubResource( 6 )
 text = "10/10"
 
-[node name="ATK" type="Label" parent="EnemyStatsHBox/PlayerStatsVBox"]
+[node name="ATK" type="Label" parent="EnemyStatsHBox/EnemyStatsVBox"]
 margin_top = 74.0
 margin_right = 85.0
 margin_bottom = 100.0
 custom_fonts/font = SubResource( 6 )
 text = "10"
 
-[node name="DEF" type="Label" parent="EnemyStatsHBox/PlayerStatsVBox"]
+[node name="DEF" type="Label" parent="EnemyStatsHBox/EnemyStatsVBox"]
 margin_top = 104.0
 margin_right = 85.0
 margin_bottom = 130.0

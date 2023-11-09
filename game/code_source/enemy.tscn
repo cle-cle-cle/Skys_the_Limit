@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://game/code_source/enemy.gd" type="Script" id=1]
 [ext_resource path="res://game/assets/Rubik_Mono_One/RubikMonoOne-Regular.ttf" type="DynamicFontData" id=2]
@@ -15,6 +15,9 @@ font_data = ExtResource( 2 )
 [sub_resource type="DynamicFont" id=9]
 size = 14
 font_data = ExtResource( 2 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 19.5, 15 )
 
 [node name="Enemy" type="Node2D"]
 position = Vector2( 673, 352 )
@@ -56,3 +59,11 @@ custom_fonts/font = SubResource( 9 )
 text = "xxx"
 align = 1
 valign = 1
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -2.5, 0 )
+shape = SubResource( 10 )
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_Area2D_mouse_entered"]

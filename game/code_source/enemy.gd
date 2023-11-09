@@ -5,8 +5,12 @@ onready var atk_label = $ATKLabel
 onready var def_label = $DEFLabel
 
 onready var sprite = $Sprite
+onready var area_2d = $Area2D
 
 
+
+
+signal mouse_entered_enemy
 
 var health = 1
 var max_health = 1
@@ -29,7 +33,10 @@ func _ready():
 	initialize_stats()
 	update_labels()
 
-
+func _on_mouse_entered_enemy():
+	print("hi")
+	
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	update_labels()
@@ -72,3 +79,7 @@ func update_labels():
 	def_label.text = String(defense)
 
 
+
+
+func _on_Area2D_mouse_entered():
+	emit_signal("mouse_entered_enemy")
