@@ -68,9 +68,8 @@ func request_move(pawn, direction):
 				if enemy_pawn.health <= 0:
 					enemy_pawn.queue_free()
 					set_cellv(cell_target, GROUND)
-				else:
-					# Enemy is not dead, get Damaged by Enemy
-					PlayerStats.health = clamp(PlayerStats.health + PlayerStats.defense - enemy_pawn.attack, 0, PlayerStats.health)
+				# Enemy Attack Player
+				PlayerStats.health = clamp(PlayerStats.health + PlayerStats.defense - enemy_pawn.attack, 0, PlayerStats.health)
 			else:
 				# Enemy no longer here, just move Actor
 				return update_pawn_position(pawn, cell_start, cell_target)

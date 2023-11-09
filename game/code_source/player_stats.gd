@@ -1,10 +1,10 @@
 extends Node
 
 
-var health = 10
-var max_health = 10
+var health = 100
+var max_health = 100
 var attack = 10
-var defense = 5
+var defense = 10
 
 
 # Called when the node enters the scene tree for the first time.

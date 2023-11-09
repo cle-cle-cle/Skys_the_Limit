@@ -7,7 +7,7 @@ export var current_level = 0
 var current_turn = 0
 var remaining_steps = 0
 var steps = [
-	[4, 3, 2], # level 0
+	[12, 15], # level 0
 	[6, 4, 5, 2], # level 1
 	[4, 3, 5, 7, 1], # level 2
 	[], # level 3
@@ -91,26 +91,26 @@ func _ready():
 	#       Tutorial Dialogue              #
 	########################################
 	if current_level == 0:
-		# hide all info at first, and show gradually
-		grid.hide()
-		player_stats_h_box.hide()
-		turn_label.hide()
-#		restart_level_button.hide()
-		restart_game_button.hide()
-		
-		play_conversation(tutorial_dialogue_1)
-		yield(self, "current_conversation_ended")
-		grid.show()
-		player_stats_h_box.show()
-		turn_label.show()
-		
-		play_conversation(tutorial_dialogue_2)
-		yield(self, "current_conversation_ended")
-#		restart_level_button.show()
-		restart_game_button.show()
-		
-		play_conversation(tutorial_dialogue_3)
-		yield(self, "current_conversation_ended")
+#		# hide all info at first, and show gradually
+#		grid.hide()
+#		player_stats_h_box.hide()
+#		turn_label.hide()
+##		restart_level_button.hide()
+#		restart_game_button.hide()
+#
+#		play_conversation(tutorial_dialogue_1)
+#		yield(self, "current_conversation_ended")
+#		grid.show()
+#		player_stats_h_box.show()
+#		turn_label.show()
+#
+#		play_conversation(tutorial_dialogue_2)
+#		yield(self, "current_conversation_ended")
+##		restart_level_button.show()
+#		restart_game_button.show()
+#
+#		play_conversation(tutorial_dialogue_3)
+#		yield(self, "current_conversation_ended")
 		dialogue_container.hide()
 		
 	########################################

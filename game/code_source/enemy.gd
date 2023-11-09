@@ -52,13 +52,13 @@ func initialize_stats():
 		ENEMY_TYPES.GREEN:
 			health = 10
 			max_health = 10
-			attack = 10
-			defense = 1
+			attack = 20
+			defense = 10
 		ENEMY_TYPES.BLUE:
-			health = 30
-			max_health = 30
-			attack = 10
-			defense = 20
+			health = 20
+			max_health = 20
+			attack = 25
+			defense = 15
 		ENEMY_TYPES.BOSS:
 			health = 999
 			max_health = 999

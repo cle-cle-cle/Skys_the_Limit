@@ -3,8 +3,8 @@ class_name Upgrade extends Pawn
 onready var label = $Label
 
 
-enum UPGRADE_TYPES{ HEALTH, ATK, DEF, ATK_MUL, DEF_MUL }
-export(UPGRADE_TYPES) var upgrade_type = UPGRADE_TYPES.HEALTH
+enum UPGRADE_TYPES{ HP, MHP, ATK, DEF, ATK_MUL, DEF_MUL }
+export(UPGRADE_TYPES) var upgrade_type = UPGRADE_TYPES.HP
 
 # Declare member variables here. Examples:
 export var value = 1 
@@ -16,8 +16,10 @@ func _ready():
 
 func update_labels():
 	match upgrade_type:
-		UPGRADE_TYPES.HEALTH:
+		UPGRADE_TYPES.HP:
 			label.text = "HP" + "\n" + "+" + String(value)
+		UPGRADE_TYPES.MHP:
+			label.text = "MHP" + "\n" + "+" + String(value)
 		UPGRADE_TYPES.ATK:
 			label.text = "ATK" + "\n" + "+" +  String(value)
 			label.modulate = "#c0d9ff"
@@ -34,8 +36,10 @@ func update_labels():
 
 func interact():
 	match upgrade_type:
-		UPGRADE_TYPES.HEALTH:
+		UPGRADE_TYPES.HP:
 			PlayerStats.health = clamp(PlayerStats.health + value, 0, PlayerStats.max_health)
+		UPGRADE_TYPES.MHP:
+			PlayerStats.max_health += value
 		UPGRADE_TYPES.ATK:
 			PlayerStats.attack += value
 		UPGRADE_TYPES.DEF:
