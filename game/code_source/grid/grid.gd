@@ -1,6 +1,6 @@
 extends TileMap
 
-enum { EMPTY = -1, ACTOR, UPGRADE, GROUND, ENEMY, STAIR, COLLAPSE }
+enum { EMPTY = -1, ACTOR, UPGRADE, GROUND, ENEMY, STAIR }
 
 signal entered_stair
 
@@ -18,20 +18,19 @@ func _ready():
 	mark_collapsing_cell(0)
 
 
-
 # Map all pawn child nodes to tile grid
 func mark_pawns():
 	for child in get_children():
 		if "type" in child:
 			set_cellv(world_to_map(child.position), child.type)
 			if child is Enemy:
-				child.connect("mouse_entered_enemy", level, "_on_mouse_entered_enemy", [child])
+				print("c")
+				child.connect("mouse_entered_pawn", level, "_on_mouse_entered_pawn", [child])
+				child.connect("mouse_left_pawn", level, "_on_mouse_left_pawn", [child])
 
-
-
-	
 
 # Mark collapsing cells of this turn, those cells will collpase before the next turn
+# we are just covering the position with a sprite, not actually using the tilemap
 func mark_collapsing_cell(turn):
 	if collapse_order.get_child_count() != 0: # don't do this for final level
 		for child in collapse_order.get_child(turn).get_children():
@@ -42,6 +41,8 @@ func mark_collapsing_cell(turn):
 
 func get_cell_pawn(coordinates):
 	for node in get_children():
+		if !node is Pawn:
+			continue
 		if world_to_map(node.position) == coordinates:
 			return(node)
 
@@ -52,9 +53,8 @@ func request_move(pawn, direction):
 	
 	var cell_target_type = get_cellv(cell_target)
 	match cell_target_type:
-		GROUND, COLLAPSE, ACTOR: #actor is extra here, just contains the player's initial position
+		GROUND, ACTOR: #actor is extra here, just contains the player's initial position
 			# Move Actor
-			print("ground")
 			return update_pawn_position(pawn, cell_start, cell_target)
 		UPGRADE:
 			if get_cell_pawn(cell_target):
@@ -81,12 +81,12 @@ func request_move(pawn, direction):
 				# Enemy no longer here, just move Actor
 				return update_pawn_position(pawn, cell_start, cell_target)
 		STAIR:
-			print("stair")
 			emit_signal("entered_stair")
 			
 			
 		EMPTY:
 			pass # Do not walk on empty cells
+
 
 func update_pawn_position(pawn, cell_start, cell_target):
 	#set_cellv(cell_target, pawn.type)
@@ -110,8 +110,6 @@ func collapse_ground(current_turn):
 	
 	for child in collapse_sprite_container.get_children():
 		child.queue_free()
-		
-
 
 
 func _on_Actor_landed_on_new_pos():

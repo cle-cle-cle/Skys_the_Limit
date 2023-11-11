@@ -253,6 +253,12 @@ func _input(event):
 			emit_signal("next_clicked")
 
 
-func _on_mouse_entered_enemy(enemy):
-	
+func _on_mouse_entered_pawn(enemy):
+	$Grid/SelectorSprite.show()
+	$Grid/SelectorSprite.position = enemy.position
+	ui.enemy_stats.show()
 	ui.update_enemy_stats_box(enemy)
+	
+func _on_mouse_left_pawn(enemy):
+	$Grid/SelectorSprite.hide()
+	ui.enemy_stats.hide()

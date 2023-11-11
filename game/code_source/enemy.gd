@@ -9,9 +9,6 @@ onready var area_2d = $Area2D
 
 
 
-
-signal mouse_entered_enemy
-
 var health = 1
 var max_health = 1
 var attack = 1
@@ -32,9 +29,6 @@ func _ready():
 	initialize_sprite()
 	initialize_stats()
 	update_labels()
-
-func _on_mouse_entered_enemy():
-	print("hi")
 	
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -82,4 +76,8 @@ func update_labels():
 
 
 func _on_Area2D_mouse_entered():
-	emit_signal("mouse_entered_enemy")
+	emit_signal("mouse_entered_pawn")
+
+
+func _on_Area2D_mouse_exited():
+	emit_signal("mouse_left_pawn")

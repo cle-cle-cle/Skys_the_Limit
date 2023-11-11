@@ -27,6 +27,7 @@ margin_top = -2160.0
 margin_right = 1332.0
 margin_bottom = -624.0
 rect_scale = Vector2( 1.403, 2 )
+mouse_filter = 2
 texture = ExtResource( 8 )
 
 [node name="Thanks" type="Label" parent="."]

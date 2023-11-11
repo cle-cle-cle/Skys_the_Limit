@@ -207,18 +207,6 @@ margin_bottom = 191.0
 rect_scale = Vector2( 1, 0.68 )
 texture = ExtResource( 7 )
 
-[node name="StatsPanel2" type="TextureRect" parent="."]
-modulate = Color( 1, 1, 1, 0.364706 )
-anchor_left = 1.0
-anchor_right = 1.0
-margin_left = -333.0
-margin_top = 31.0
-margin_right = -3.0
-margin_bottom = 191.0
-rect_scale = Vector2( 1, 0.68 )
-texture = ExtResource( 7 )
-flip_h = true
-
 [node name="PlayerStatsHBox" type="HBoxContainer" parent="."]
 margin_right = 140.0
 margin_bottom = 300.0
@@ -305,23 +293,41 @@ margin_bottom = 130.0
 custom_fonts/font = SubResource( 6 )
 text = "10"
 
-[node name="EnemyStatsHBox" type="HBoxContainer" parent="."]
+[node name="EnemyStats" type="Control" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="StatsPanel2" type="TextureRect" parent="EnemyStats"]
+modulate = Color( 1, 1, 1, 0.364706 )
 anchor_left = 1.0
 anchor_right = 1.0
-margin_left = -296.0
+margin_left = 907.0
+margin_top = 31.0
+margin_right = 1237.0
+margin_bottom = 191.0
+rect_scale = Vector2( 1, 0.68 )
+texture = ExtResource( 7 )
+flip_h = true
+
+[node name="EnemyStatsHBox" type="HBoxContainer" parent="EnemyStats"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = 944.0
+margin_right = 1240.0
 margin_bottom = 300.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="EnemyStatsHBox"]
+[node name="VBoxContainer" type="VBoxContainer" parent="EnemyStats/EnemyStatsHBox"]
 margin_right = 51.0
 margin_bottom = 300.0
 
-[node name="Spacer" type="Panel" parent="EnemyStatsHBox/VBoxContainer"]
+[node name="Spacer" type="Panel" parent="EnemyStats/EnemyStatsHBox/VBoxContainer"]
 margin_right = 51.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 0, 40 )
 custom_styles/panel = SubResource( 5 )
 
-[node name="HP" type="Label" parent="EnemyStatsHBox/VBoxContainer"]
+[node name="HP" type="Label" parent="EnemyStats/EnemyStatsHBox/VBoxContainer"]
 margin_top = 44.0
 margin_right = 51.0
 margin_bottom = 70.0
@@ -329,7 +335,7 @@ custom_fonts/font = SubResource( 6 )
 text = "HP"
 align = 1
 
-[node name="ATK" type="Label" parent="EnemyStatsHBox/VBoxContainer"]
+[node name="ATK" type="Label" parent="EnemyStats/EnemyStatsHBox/VBoxContainer"]
 margin_top = 74.0
 margin_right = 51.0
 margin_bottom = 100.0
@@ -337,7 +343,7 @@ custom_fonts/font = SubResource( 6 )
 text = "ATK"
 align = 1
 
-[node name="DEF" type="Label" parent="EnemyStatsHBox/VBoxContainer"]
+[node name="DEF" type="Label" parent="EnemyStats/EnemyStatsHBox/VBoxContainer"]
 margin_top = 104.0
 margin_right = 51.0
 margin_bottom = 130.0
@@ -345,46 +351,46 @@ custom_fonts/font = SubResource( 6 )
 text = "DEF"
 align = 1
 
-[node name="Spacer" type="Panel" parent="EnemyStatsHBox"]
+[node name="Spacer" type="Panel" parent="EnemyStats/EnemyStatsHBox"]
 margin_left = 55.0
 margin_right = 75.0
 margin_bottom = 300.0
 rect_min_size = Vector2( 20, 40 )
 custom_styles/panel = SubResource( 5 )
 
-[node name="EnemyStatsVBox" type="VBoxContainer" parent="EnemyStatsHBox"]
+[node name="EnemyStatsVBox" type="VBoxContainer" parent="EnemyStats/EnemyStatsHBox"]
 margin_left = 79.0
 margin_right = 164.0
 margin_bottom = 300.0
 
-[node name="Spacer" type="Panel" parent="EnemyStatsHBox/EnemyStatsVBox"]
+[node name="Spacer" type="Panel" parent="EnemyStats/EnemyStatsHBox/EnemyStatsVBox"]
 margin_right = 85.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 0, 40 )
 custom_styles/panel = SubResource( 5 )
 
-[node name="HP" type="Label" parent="EnemyStatsHBox/EnemyStatsVBox"]
+[node name="HP" type="Label" parent="EnemyStats/EnemyStatsHBox/EnemyStatsVBox"]
 margin_top = 44.0
 margin_right = 85.0
 margin_bottom = 70.0
 custom_fonts/font = SubResource( 6 )
 text = "10/10"
 
-[node name="ATK" type="Label" parent="EnemyStatsHBox/EnemyStatsVBox"]
+[node name="ATK" type="Label" parent="EnemyStats/EnemyStatsHBox/EnemyStatsVBox"]
 margin_top = 74.0
 margin_right = 85.0
 margin_bottom = 100.0
 custom_fonts/font = SubResource( 6 )
 text = "10"
 
-[node name="DEF" type="Label" parent="EnemyStatsHBox/EnemyStatsVBox"]
+[node name="DEF" type="Label" parent="EnemyStats/EnemyStatsHBox/EnemyStatsVBox"]
 margin_top = 104.0
 margin_right = 85.0
 margin_bottom = 130.0
 custom_fonts/font = SubResource( 6 )
 text = "10"
 
-[node name="TextureRect" type="TextureRect" parent="EnemyStatsHBox"]
+[node name="TextureRect" type="TextureRect" parent="EnemyStats/EnemyStatsHBox"]
 margin_left = 168.0
 margin_right = 296.0
 margin_bottom = 300.0
