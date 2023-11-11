@@ -72,7 +72,7 @@ upgrade_type = 3
 value = 5
 
 [node name="ATK_5" parent="Grid" instance=ExtResource( 3 )]
-position = Vector2( 800, 288 )
+position = Vector2( 737, 349 )
 upgrade_type = 2
 value = 5
 
