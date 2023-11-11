@@ -1,3 +1,4 @@
+tool
 class_name Enemy extends Pawn
 
 onready var hp_label = $HPLabel
@@ -17,7 +18,11 @@ var defense = 1
 
 # Declare member variables here. Examples:
 enum ENEMY_TYPES{ GREEN, BLUE, PINK, BOSS }
-export(ENEMY_TYPES) var enemy_type = ENEMY_TYPES.GREEN
+export(ENEMY_TYPES) var enemy_type = ENEMY_TYPES.GREEN setget set_enemy_type
+
+
+func set_enemy_type(type):
+	enemy_type = type
 
 
 # Called when the node enters the scene tree for the first time.
@@ -31,9 +36,9 @@ func _ready():
 	update_labels()
 	
 	
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+
 func _process(delta):
-	update_labels()
+		update_labels()
 
 
 func initialize_sprite():
@@ -68,9 +73,9 @@ func initialize_stats():
 
 
 func update_labels():
-	hp_label.text = String(health) + "/" + String(max_health)
-	atk_label.text = String(attack)
-	def_label.text = String(defense)
+	$HPLabel.text = String(health) + "/" + String(max_health)
+	$ATKLabel.text = String(attack)
+	$DEFLabel.text = String(defense)
 
 
 

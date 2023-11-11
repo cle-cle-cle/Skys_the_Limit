@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://game/code_source/enemy.gd" type="Script" id=1]
+[ext_resource path="res://game/code_source/pawns/enemy.gd" type="Script" id=1]
 [ext_resource path="res://game/assets/Rubik_Mono_One/RubikMonoOne-Regular.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://game/assets/slime_green.png" type="Texture" id=3]
 
@@ -34,7 +34,7 @@ margin_right = 43.0
 margin_bottom = -13.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 7 )
-text = "xxx/xxx"
+text = "1/1"
 align = 1
 valign = 1
 
@@ -45,7 +45,7 @@ margin_right = 2.0
 margin_bottom = 36.0
 custom_colors/font_color = Color( 0.027451, 0, 0.623529, 1 )
 custom_fonts/font = SubResource( 8 )
-text = "xxx"
+text = "1"
 align = 1
 valign = 1
 
@@ -56,7 +56,7 @@ margin_right = 42.0
 margin_bottom = 36.0
 custom_colors/font_color = Color( 0, 0.301961, 0.101961, 1 )
 custom_fonts/font = SubResource( 9 )
-text = "xxx"
+text = "1"
 align = 1
 valign = 1
 

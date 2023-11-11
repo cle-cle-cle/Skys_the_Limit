@@ -1,18 +1,26 @@
+tool
 class_name Upgrade extends Pawn
 
 onready var label = $Label
 
 
+# Upgrad stats
 enum UPGRADE_TYPES{ HP, MHP, ATK, DEF, ATK_MUL, DEF_MUL }
-export(UPGRADE_TYPES) var upgrade_type = UPGRADE_TYPES.HP
-
-# Declare member variables here. Examples:
-export var value = 1 
+export(UPGRADE_TYPES) var upgrade_type = UPGRADE_TYPES.HP setget set_upgrade_type
+export var value = 1 setget set_value
 
 
-# Called when the node enters the scene tree for the first time.
+func set_upgrade_type(type):
+	upgrade_type = type
+
+
+func set_value(v):
+	value = v
+
+
 func _ready():
 	update_labels()
+
 
 func update_labels():
 	match upgrade_type:

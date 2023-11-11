@@ -35,7 +35,7 @@ onready var dialogue_container = $UI/DialogueContainer
 
 
 # Dialogue
-onready var Dialogue = preload("res://game/code_source/Dialogue.tscn")
+onready var Dialogue = preload("res://game/code_source/dialogue.tscn")
 signal next_clicked
 signal current_conversation_ended
 var tutorial_dialogue_1 = [

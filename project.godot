@@ -12,7 +12,7 @@ _global_script_classes=[ {
 "base": "Pawn",
 "class": "Enemy",
 "language": "GDScript",
-"path": "res://game/code_source/enemy.gd"
+"path": "res://game/code_source/pawns/enemy.gd"
 }, {
 "base": "Node2D",
 "class": "Pawn",
@@ -27,7 +27,7 @@ _global_script_classes=[ {
 "base": "Pawn",
 "class": "Upgrade",
 "language": "GDScript",
-"path": "res://game/code_source/upgrade.gd"
+"path": "res://game/code_source/pawns/upgrade.gd"
 } ]
 _global_script_class_icons={
 "Enemy": "",
