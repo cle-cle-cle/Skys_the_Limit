@@ -82,12 +82,12 @@ script = ExtResource( 5 )
 
 [node name="SelectorSprite" type="Sprite" parent="Grid"]
 visible = false
-modulate = Color( 0.478431, 0.478431, 0.478431, 0.439216 )
+modulate = Color( 0.156863, 0.14902, 0.192157, 0.615686 )
 position = Vector2( 608, 285 )
 texture = ExtResource( 7 )
 
 [node name="Actor" parent="Grid" instance=ExtResource( 1 )]
-position = Vector2( 415, 349 )
+position = Vector2( 415, 348 )
 
 [node name="GreenSlime" parent="Grid" instance=ExtResource( 2 )]
 position = Vector2( 672, 284 )
