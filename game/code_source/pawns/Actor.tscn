@@ -2,7 +2,7 @@
 
 [ext_resource path="res://game/code_source/pawns/actor.gd" type="Script" id=1]
 [ext_resource path="res://game/assets/angel.png" type="Texture" id=2]
-[ext_resource path="res://game/assets/Rubik_Mono_One/RubikMonoOne-Regular.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://game/assets/fonts/RubikMonoOne-Regular.ttf" type="DynamicFontData" id=3]
 
 [sub_resource type="Animation" id=4]
 length = 0.001
@@ -79,6 +79,7 @@ tracks/2/keys = {
 
 [sub_resource type="DynamicFont" id=3]
 size = 14
+outline_size = 1
 font_data = ExtResource( 3 )
 
 [node name="Actor" type="Node2D"]

@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://game/code_source/pawns/upgrade.gd" type="Script" id=1]
-[ext_resource path="res://game/assets/Rubik_Mono_One/RubikMonoOne-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://game/assets/fonts/RubikMonoOne-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://game/assets/upgrades/bottle_green.png" type="Texture" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 outline_size = 2
@@ -14,14 +15,17 @@ script = ExtResource( 1 )
 type = 1
 upgrade_type = 1
 
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, -1 )
+texture = ExtResource( 3 )
+
 [node name="Label" type="Label" parent="."]
 margin_left = -21.0
-margin_top = -21.0
+margin_top = -17.0
 margin_right = 21.0
-margin_bottom = 22.0
-custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+margin_bottom = 26.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 1 )
-text = "ATK
-+3"
+text = "+1"
 align = 1
 valign = 1

@@ -2,6 +2,7 @@ tool
 class_name Upgrade extends Pawn
 
 onready var label = $Label
+onready var sprite = $Sprite
 
 
 # Upgrad stats
@@ -20,7 +21,17 @@ func set_value(v):
 
 func _ready():
 	update_labels()
+	initialize_sprite()
 
+
+func initialize_sprite():
+	match upgrade_type:
+		UPGRADE_TYPES.ATK:
+			sprite.texture = preload("res://game/assets/upgrades/bottle_blue.png")
+		UPGRADE_TYPES.DEF:
+			sprite.texture = preload("res://game/assets/upgrades/bottle_green.png")
+		_:
+			sprite.hide()
 
 func update_labels():
 	match upgrade_type:
@@ -29,10 +40,10 @@ func update_labels():
 		UPGRADE_TYPES.MHP:
 			label.text = "MHP" + "\n" + "+" + String(value)
 		UPGRADE_TYPES.ATK:
-			label.text = "ATK" + "\n" + "+" +  String(value)
+			label.text = "+" +  String(value)
 			label.modulate = "#c0d9ff"
 		UPGRADE_TYPES.DEF:
-			label.text = "DEF" + "\n" + "+" +  String(value)
+			label.text = "+" +  String(value)
 			label.modulate = "#ccffc5"
 		UPGRADE_TYPES.ATK_MUL:
 			label.text = "ATK" + "\n" + "x" +  String(value)

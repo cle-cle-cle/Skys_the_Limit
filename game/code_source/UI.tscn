@@ -4,8 +4,8 @@
 [ext_resource path="res://game/code_source/player_stats_vbox.gd" type="Script" id=2]
 [ext_resource path="res://game/assets/ladyangel_avatar.png" type="Texture" id=3]
 [ext_resource path="res://game/code_source/dialogue.tscn" type="PackedScene" id=4]
-[ext_resource path="res://game/assets/Rubik_Mono_One/RubikMonoOne-Regular.ttf" type="DynamicFontData" id=5]
-[ext_resource path="res://game/assets/Rubik_Mono_One/IBMPlexMono-SemiBold.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://game/assets/fonts/RubikMonoOne-Regular.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://game/assets/fonts/IBMPlexMono-SemiBold.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://game/assets/UI/stats_panel.png" type="Texture" id=7]
 [ext_resource path="res://game/assets/slime_green.png" type="Texture" id=8]
 [ext_resource path="res://game/code_source/ui.gd" type="Script" id=9]
@@ -294,8 +294,10 @@ custom_fonts/font = SubResource( 6 )
 text = "10"
 
 [node name="EnemyStats" type="Control" parent="."]
-visible = false
-margin_right = 40.0
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -1280.0
+margin_right = -1240.0
 margin_bottom = 40.0
 
 [node name="StatsPanel2" type="TextureRect" parent="EnemyStats"]
