@@ -65,6 +65,11 @@ func initialize_stats():
 			max_health = 20
 			attack = 25
 			defense = 15
+		ENEMY_TYPES.PINK:
+			health = 15
+			max_health = 15
+			attack = 30
+			defense = 20
 		ENEMY_TYPES.BOSS:
 			health = 999
 			max_health = 999

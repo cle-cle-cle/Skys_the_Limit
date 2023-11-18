@@ -143,7 +143,6 @@ align = 1
 
 [node name="RestartLevelButton" type="Button" parent="."]
 pause_mode = 2
-visible = false
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -170,10 +169,10 @@ text = "Restart From This Level"
 pause_mode = 2
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -250.0
-margin_top = 71.0
-margin_right = 250.0
-margin_bottom = 97.0
+margin_left = -251.0
+margin_top = 115.0
+margin_right = 249.0
+margin_bottom = 141.0
 rect_min_size = Vector2( 500, 20 )
 custom_colors/font_color_disabled = Color( 0.2, 0.2, 0.2, 1 )
 custom_colors/font_color_focus = Color( 0.2, 0.2, 0.2, 1 )
@@ -191,10 +190,10 @@ text = "Restart From 1st Level"
 [node name="GameOverLabel" type="Label" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -121.0
-margin_top = 104.0
-margin_right = 122.0
-margin_bottom = 144.0
+margin_left = -117.0
+margin_top = 155.0
+margin_right = 126.0
+margin_bottom = 195.0
 custom_colors/font_color = Color( 0.541176, 0.176471, 0.176471, 1 )
 custom_fonts/font = SubResource( 11 )
 text = "Game Over"
@@ -449,3 +448,6 @@ align = 1
 autoplay = "wiggle"
 anims/RESET = SubResource( 14 )
 anims/wiggle = SubResource( 13 )
+
+[connection signal="pressed" from="RestartLevelButton" to="." method="_on_RestartLevelButton_pressed"]
+[connection signal="pressed" from="RestartGameButton" to="." method="_on_RestartGameButton_pressed"]

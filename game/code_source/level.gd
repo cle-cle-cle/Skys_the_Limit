@@ -8,7 +8,7 @@ var current_turn = 0
 var remaining_steps = 0
 var steps = [
 	[12, 15], # level 0
-	[6, 4, 5, 2], # level 1
+	[8, 5, 3, 5, 9], # level 1
 	[4, 3, 5, 7, 1], # level 2
 	[], # level 3
 ]
@@ -22,7 +22,7 @@ onready var actor = $Grid/Actor
 onready var ui = $UI
 onready var level_label = $UI/LevelLabel
 onready var turn_label = $UI/TurnLabel
-#onready var restart_level_button = $CanvasLayer/RestartLevelButton
+onready var restart_level_button = $UI/RestartLevelButton
 onready var restart_game_button = $UI/RestartGameButton
 onready var player_stats_h_box = $UI/PlayerStatsHBox
 onready var player_stats_v_box = $UI/PlayerStatsHBox/PlayerStatsVBox
@@ -77,6 +77,7 @@ func _ready():
 	actor.connect("landed_on_new_pos", grid, "_on_Actor_landed_on_new_pos")
 	grid.connect("entered_stair", self, "_on_Grid_entered_stair")
 	
+
 	
 	# Fresh Turn
 	if current_level < 3:
@@ -140,8 +141,8 @@ func _ready():
 		# hide everything in UI
 		level_label.hide()
 		turn_label.hide()
-#		restart_level_button.hide()
-		restart_game_button.hide()
+		ui.restart_level_button.hide()
+		ui.restart_game_button.hide()
 		player_stats_h_box.hide()
 		game_over_label.hide()
 		dialogue_container.hide()
@@ -159,9 +160,12 @@ func _process(delta):
 		player_stats_v_box.update_labels()
 		
 		game_over_label.show()
-#		restart_level_button.show()
-		restart_game_button.show()
+		ui.restart_level_button.show()
+		ui.restart_game_button.show()
 		get_tree().paused = true
+
+
+
 
 
 # Update Level and Steps Labels
@@ -197,28 +201,6 @@ func start_new_turn():
 	else:
 		grid.mark_collapsing_cell(current_turn)
 		remaining_steps = steps[current_level][current_turn]
-
-
-# Restart Level
-func _on_RestartButton_pressed():
-	# Reset All Player Stats
-	PlayerStats.health = 10
-	PlayerStats.max_health = 10
-	PlayerStats.attack = 10
-	PlayerStats.defense = 5
-
-	get_tree().reload_current_scene()
-
-
-# Restart Game
-func _on_RestartGameButton_pressed():
-	# Reset All Player Stats
-	PlayerStats.health = 10
-	PlayerStats.max_health = 10
-	PlayerStats.attack = 10
-	PlayerStats.defense = 5
-	
-	get_tree().change_scene("res://game/code_source/levels/Level_0.tscn")
 
 
 
