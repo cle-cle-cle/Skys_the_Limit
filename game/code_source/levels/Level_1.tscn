@@ -78,7 +78,7 @@ current = true
 tile_set = ExtResource( 12 )
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 format = 1
-tile_data = PoolIntArray( 196618, 2, 0, 196619, 2, 0, 262146, 2, 0, 262147, 2, 0, 262148, 2, 0, 262149, 2, 0, 262150, 2, 0, 262151, 2, 0, 262152, 2, 0, 262153, 2, 0, 262154, 2, 0, 262155, 2, 0, 262156, 2, 0, 262157, 2, 0, 262158, 2, 0, 262159, 2, 0, 262160, 2, 0, 262161, 3, 0, 327682, 2, 0, 327683, 2, 0, 327684, 2, 0, 327685, 2, 0, 327686, 2, 0, 327687, 2, 0, 327688, 2, 0, 327689, 2, 0, 327690, 2, 0, 327691, 2, 0, 327692, 2, 0, 327693, 2, 0, 327694, 2, 0, 327695, 2, 0, 327696, 2, 0, 327697, 2, 0, 393218, 2, 0, 393219, 2, 0, 393220, 2, 0, 393221, 2, 0, 393222, 2, 0, 393223, 2, 0, 393224, 2, 0, 393225, 2, 0, 393226, 2, 0, 393227, 2, 0, 393228, 2, 0, 393229, 2, 0, 393230, 2, 0, 393231, 2, 0, 393232, 2, 0, 393233, 2, 0, 458754, 2, 0, 458755, 2, 0, 458756, 2, 0, 458757, 2, 0, 458758, 2, 0, 458759, 2, 0, 458760, 2, 0, 458761, 2, 0, 458762, 2, 0, 458763, 2, 0, 458764, 2, 0, 458765, 2, 0, 458766, 2, 0, 458767, 2, 0, 458768, 2, 0, 458769, 2, 0, 524290, 2, 0, 524291, 2, 0, 524292, 2, 0, 524293, 2, 0, 524294, 2, 0, 524295, 2, 0, 524296, 2, 0, 524297, 2, 0, 524298, 2, 0, 524299, 2, 0, 524300, 2, 0, 524301, 2, 0, 524302, 2, 0, 524303, 2, 0, 524304, 2, 0, 524305, 2, 0 )
+tile_data = PoolIntArray( 196618, 2, 0, 196619, 2, 0, 262146, 2, 0, 262147, 2, 0, 262148, 2, 0, 262149, 2, 0, 262150, 2, 0, 262151, 2, 0, 262152, 2, 0, 262153, 2, 0, 262154, 2, 0, 262155, 2, 0, 262156, 2, 0, 262157, 2, 0, 262158, 2, 0, 262159, 2, 0, 262160, 2, 0, 262161, 3, 0, 327682, 2, 0, 327683, 2, 0, 327684, 2, 0, 327685, 2, 0, 327686, 2, 0, 327687, 2, 0, 327688, 2, 0, 327689, 2, 0, 327690, 2, 0, 327691, 2, 0, 327692, 2, 0, 327693, 2, 0, 327694, 2, 0, 327695, 2, 0, 327697, 2, 0, 393218, 2, 0, 393219, 2, 0, 393220, 2, 0, 393221, 2, 0, 393222, 2, 0, 393223, 2, 0, 393224, 2, 0, 393225, 2, 0, 393226, 2, 0, 393227, 2, 0, 393228, 2, 0, 393229, 2, 0, 393230, 2, 0, 393231, 2, 0, 393232, 2, 0, 393233, 2, 0, 458754, 2, 0, 458755, 2, 0, 458756, 2, 0, 458757, 2, 0, 458758, 2, 0, 458759, 2, 0, 458760, 2, 0, 458761, 2, 0, 458762, 2, 0, 458763, 2, 0, 458764, 2, 0, 458765, 2, 0, 458766, 2, 0, 458767, 2, 0, 458769, 2, 0, 524290, 2, 0, 524291, 2, 0, 524292, 2, 0, 524293, 2, 0, 524294, 2, 0, 524295, 2, 0, 524296, 2, 0, 524297, 2, 0, 524298, 2, 0, 524299, 2, 0, 524300, 2, 0, 524301, 2, 0, 524302, 2, 0, 524303, 2, 0, 524304, 2, 0, 524305, 2, 0 )
 script = ExtResource( 14 )
 
 [node name="CollapseSpriteContainer" type="Node2D" parent="Grid"]
@@ -163,15 +163,15 @@ position = Vector2( 1122, 541 )
 type = 3
 enemy_type = 2
 
-[node name="HP_20" parent="Grid" instance=ExtResource( 9 )]
+[node name="HP_10s" parent="Grid" instance=ExtResource( 9 )]
 position = Vector2( 737, 219 )
 upgrade_type = 0
-value = 20
+value = 10
 
-[node name="DEF_1" parent="Grid" instance=ExtResource( 9 )]
+[node name="ATK_5d" parent="Grid" instance=ExtResource( 9 )]
 position = Vector2( 546, 354 )
 upgrade_type = 2
-value = 10
+value = 5
 
 [node name="DEF_2" parent="Grid" instance=ExtResource( 9 )]
 position = Vector2( 416, 541 )
@@ -189,7 +189,7 @@ upgrade_type = 2
 value = 5
 
 [node name="ATK_5b" parent="Grid" instance=ExtResource( 9 )]
-position = Vector2( 928, 285 )
+position = Vector2( 865, 349 )
 upgrade_type = 2
 value = 5
 
@@ -204,7 +204,7 @@ upgrade_type = 3
 value = 5
 
 [node name="DEF_5a" parent="Grid" instance=ExtResource( 9 )]
-position = Vector2( 864, 350 )
+position = Vector2( 928, 287 )
 upgrade_type = 3
 value = 5
 
@@ -213,10 +213,15 @@ position = Vector2( 159, 345 )
 upgrade_type = 0
 value = 10
 
-[node name="HP_10b" parent="Grid" instance=ExtResource( 9 )]
+[node name="ATK_Treasure" parent="Grid" instance=ExtResource( 9 )]
+position = Vector2( 1121, 414 )
+upgrade_type = 2
+value = 200
+
+[node name="ATK_5e" parent="Grid" instance=ExtResource( 9 )]
 position = Vector2( 415, 282 )
-upgrade_type = 0
-value = 10
+upgrade_type = 2
+value = 5
 
 [node name="HP_10c" parent="Grid" instance=ExtResource( 9 )]
 position = Vector2( 415, 409 )
@@ -228,18 +233,13 @@ position = Vector2( 673, 345 )
 upgrade_type = 0
 value = 10
 
-[node name="HP_10e" parent="Grid" instance=ExtResource( 9 )]
-position = Vector2( 673, 476 )
-upgrade_type = 0
-value = 10
-
 [node name="HP_10f" parent="Grid" instance=ExtResource( 9 )]
 position = Vector2( 992, 345 )
 upgrade_type = 0
 value = 10
 
 [node name="HP_10_g" parent="Grid" instance=ExtResource( 9 )]
-position = Vector2( 1056, 474 )
+position = Vector2( 995, 535 )
 upgrade_type = 0
 value = 10
 
@@ -254,47 +254,47 @@ texture = ExtResource( 17 )
 [node name="Fences" type="YSort" parent="Grid"]
 
 [node name="Sprite" type="Sprite" parent="Grid/Fences"]
-position = Vector2( 480, 356 )
+position = Vector2( 436, 193 )
 texture = ExtResource( 15 )
 
 [node name="Sprite2" type="Sprite" parent="Grid/Fences"]
-position = Vector2( 544, 356 )
+position = Vector2( 217, 190 )
 texture = ExtResource( 15 )
 
 [node name="Sprite3" type="Sprite" parent="Grid/Fences"]
-position = Vector2( 480, 293 )
+position = Vector2( 290, 192 )
 texture = ExtResource( 15 )
 
 [node name="Sprite4" type="Sprite" parent="Grid/Fences"]
-position = Vector2( 544, 293 )
+position = Vector2( 361, 194 )
 texture = ExtResource( 15 )
 
 [node name="Sprite5" type="Sprite" parent="Grid/Fences"]
-position = Vector2( 1055, 353 )
+position = Vector2( 1210, 352 )
 texture = ExtResource( 16 )
 
 [node name="Sprite6" type="Sprite" parent="Grid/Fences"]
-position = Vector2( 1056, 480 )
+position = Vector2( 1209, 431 )
 texture = ExtResource( 16 )
 
 [node name="Sprite7" type="Sprite" parent="Grid/Fences"]
-position = Vector2( 607, 421 )
+position = Vector2( 142, 191 )
 texture = ExtResource( 15 )
 
 [node name="Sprite8" type="Sprite" parent="Grid/Fences"]
-position = Vector2( 866, 353 )
+position = Vector2( 142, 218 )
 texture = ExtResource( 15 )
 
 [node name="Sprite9" type="Sprite" parent="Grid/Fences"]
-position = Vector2( 929, 353 )
+position = Vector2( 214, 217 )
 texture = ExtResource( 15 )
 
 [node name="Sprite10" type="Sprite" parent="Grid/Fences"]
-position = Vector2( 993, 420 )
+position = Vector2( 290, 223 )
 texture = ExtResource( 15 )
 
 [node name="Sprite11" type="Sprite" parent="Grid/Fences"]
-position = Vector2( 992, 482 )
+position = Vector2( 364, 223 )
 texture = ExtResource( 15 )
 
 [node name="CollapseOrder" type="Node2D" parent="Grid"]
@@ -893,27 +893,11 @@ margin_bottom = 296.0
 custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
 text = "5"
 
-[node name="Label7" type="Label" parent="Grid/CollapseOrder/5"]
-margin_left = 1052.0
-margin_top = 345.0
-margin_right = 1092.0
-margin_bottom = 359.0
-custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
-text = "5"
-
 [node name="Label8" type="Label" parent="Grid/CollapseOrder/5"]
 margin_left = 1055.0
 margin_top = 412.0
 margin_right = 1095.0
 margin_bottom = 426.0
-custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
-text = "5"
-
-[node name="Label9" type="Label" parent="Grid/CollapseOrder/5"]
-margin_left = 1054.0
-margin_top = 476.0
-margin_right = 1094.0
-margin_bottom = 490.0
 custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
 text = "5"
 

@@ -18,7 +18,6 @@
 [ext_resource path="res://game/sounds/pickupCoin.wav" type="AudioStream" id=17]
 [ext_resource path="res://game/sounds/melody.wav" type="AudioStream" id=18]
 
-
 [sub_resource type="DynamicFont" id=6]
 size = 24
 font_data = ExtResource( 7 )
