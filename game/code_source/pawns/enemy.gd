@@ -17,7 +17,7 @@ var defense = 1
 
 
 # Declare member variables here. Examples:
-enum ENEMY_TYPES{ GREEN, BLUE, PINK, BOSS }
+enum ENEMY_TYPES{ GREEN, BLUE, PINK, ANGEL, BOSS, BOSS_PHT}
 export(ENEMY_TYPES) var enemy_type = ENEMY_TYPES.GREEN setget set_enemy_type
 
 
@@ -27,7 +27,11 @@ func set_enemy_type(type):
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	if enemy_type == ENEMY_TYPES.BOSS:
+	if enemy_type == ENEMY_TYPES.ANGEL:
+		hp_label.rect_position += Vector2(0, -40)
+		atk_label.rect_position += Vector2(0, 30)
+		def_label.rect_position += Vector2(0, 30)
+	elif enemy_type ==ENEMY_TYPES.BOSS: 
 		hp_label.rect_position += Vector2(0, -40)
 		atk_label.rect_position += Vector2(0, 30)
 		def_label.rect_position += Vector2(0, 30)
@@ -49,8 +53,12 @@ func initialize_sprite():
 			sprite.texture = preload("res://game/assets/slime_blue.png")
 		ENEMY_TYPES.PINK:
 			sprite.texture = preload("res://game/assets/slime_pink.png")
-		ENEMY_TYPES.BOSS:
+		ENEMY_TYPES.ANGEL:
 			sprite.texture = preload("res://game/assets/ladyangel.png")
+		ENEMY_TYPES.BOSS:
+			sprite.texture = preload("res://game/assets/ladyangel_black.png")
+		ENEMY_TYPES.BOSS_PHT:
+			sprite.texture = preload("res://game/assets/ladyangel_black_phantom.png")
 
 
 func initialize_stats():
@@ -70,11 +78,21 @@ func initialize_stats():
 			max_health = 15
 			attack = 30
 			defense = 20
-		ENEMY_TYPES.BOSS:
+		ENEMY_TYPES.ANGEL:
 			health = 999
 			max_health = 999
-			attack = 300
-			defense = 1
+			attack = 999
+			defense = 999
+		ENEMY_TYPES.BOSS:
+			health = '??'
+			max_health = '??'
+			attack = '??'
+			defense = '??'
+		ENEMY_TYPES.BOSS_PHT:
+			health = ''
+			max_health = ''
+			attack = ''
+			defense = ''
 
 
 func update_labels():
