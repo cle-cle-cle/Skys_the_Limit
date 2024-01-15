@@ -39,9 +39,9 @@ orbit_velocity = 0.0
 orbit_velocity_random = 0.0
 scale = 3.0
 
-[node name="Level_2" type="Node"]
+[node name="Level_7" type="Node"]
 script = ExtResource( 13 )
-current_level = 2
+current_level = 7
 
 [node name="Background" type="TextureRect" parent="."]
 visible = false

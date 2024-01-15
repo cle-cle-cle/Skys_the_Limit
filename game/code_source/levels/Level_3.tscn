@@ -1,21 +1,21 @@
 [gd_scene load_steps=19 format=2]
 
-[ext_resource path="res://game/sounds/melody.wav" type="AudioStream" id=1]
-[ext_resource path="res://game/code_source/pawns/Actor.tscn" type="PackedScene" id=2]
-[ext_resource path="res://game/sounds/click.wav" type="AudioStream" id=3]
-[ext_resource path="res://game/sounds/hitHurt.wav" type="AudioStream" id=4]
-[ext_resource path="res://game/sounds/pickupCoin.wav" type="AudioStream" id=5]
+[ext_resource path="res://game/code_source/stair.gd" type="Script" id=1]
+[ext_resource path="res://game/code_source/grid.gd" type="Script" id=2]
+[ext_resource path="res://game/assets/grid/grid_tileset.tres" type="TileSet" id=3]
+[ext_resource path="res://game/sounds/melody.wav" type="AudioStream" id=4]
+[ext_resource path="res://game/assets/UI/selector.png" type="Texture" id=5]
 [ext_resource path="res://game/assets/backgrounds/bg_2.png" type="Texture" id=6]
-[ext_resource path="res://game/code_source/stair.gd" type="Script" id=7]
-[ext_resource path="res://game/code_source/ui.tscn" type="PackedScene" id=8]
-[ext_resource path="res://game/assets/ladyangel_black_right.png" type="Texture" id=9]
-[ext_resource path="res://game/assets/UI/selector.png" type="Texture" id=10]
-[ext_resource path="res://game/code_source/pawns/enemy.tscn" type="PackedScene" id=11]
-[ext_resource path="res://game/assets/grid/grid_tileset.tres" type="TileSet" id=12]
-[ext_resource path="res://game/code_source/level.gd" type="Script" id=13]
-[ext_resource path="res://game/code_source/grid.gd" type="Script" id=14]
-[ext_resource path="res://game/assets/ladyangel_black_left.png" type="Texture" id=15]
-[ext_resource path="res://game/assets/stair.png" type="Texture" id=17]
+[ext_resource path="res://game/assets/stair.png" type="Texture" id=7]
+[ext_resource path="res://game/sounds/hitHurt.wav" type="AudioStream" id=8]
+[ext_resource path="res://game/sounds/pickupCoin.wav" type="AudioStream" id=9]
+[ext_resource path="res://game/assets/ladyangel_black_right.png" type="Texture" id=10]
+[ext_resource path="res://game/sounds/click.wav" type="AudioStream" id=11]
+[ext_resource path="res://game/assets/ladyangel_black_left.png" type="Texture" id=12]
+[ext_resource path="res://game/code_source/pawns/enemy.tscn" type="PackedScene" id=13]
+[ext_resource path="res://game/code_source/pawns/Actor.tscn" type="PackedScene" id=14]
+[ext_resource path="res://game/code_source/ui.tscn" type="PackedScene" id=15]
+[ext_resource path="res://game/code_source/level.gd" type="Script" id=16]
 
 [sub_resource type="ParticlesMaterial" id=1]
 emission_shape = 2
@@ -38,9 +38,9 @@ orbit_velocity = 0.0
 orbit_velocity_random = 0.0
 scale = 3.0
 
-[node name="Level_2" type="Node"]
-script = ExtResource( 13 )
-current_level = 2
+[node name="Level_3" type="Node"]
+script = ExtResource( 16 )
+current_level = 3
 
 [node name="Background" type="TextureRect" parent="."]
 visible = false
@@ -75,207 +75,48 @@ position = Vector2( 639, 352 )
 current = true
 
 [node name="Grid" type="TileMap" parent="."]
-tile_set = ExtResource( 12 )
+tile_set = ExtResource( 3 )
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 format = 1
 tile_data = PoolIntArray( 262147, 2, 0, 262148, 2, 0, 262149, 2, 0, 262150, 2, 0, 262151, 2, 0, 262152, 2, 0, 262153, 2, 0, 262154, 2, 0, 262155, 2, 0, 262156, 2, 0, 262157, 2, 0, 262158, 2, 0, 262159, 2, 0, 262160, 2, 0, 327683, 2, 0, 327684, 2, 0, 327685, 2, 0, 327686, 2, 0, 327687, 2, 0, 327688, 2, 0, 327689, 2, 0, 327690, 2, 0, 327691, 2, 0, 327692, 2, 0, 327693, 2, 0, 327694, 2, 0, 393219, 2, 0, 393220, 2, 0, 393221, 2, 0, 393222, 2, 0, 393223, 2, 0, 393224, 2, 0, 393225, 2, 0, 393226, 2, 0, 393227, 2, 0, 393228, 2, 0, 393229, 2, 0, 393230, 2, 0, 393231, 2, 0, 393232, 2, 0, 458755, 2, 0, 458756, 2, 0, 458757, 2, 0, 458758, 2, 0, 458759, 2, 0, 458760, 2, 0, 458761, 2, 0, 458762, 2, 0, 458763, 2, 0, 458764, 2, 0, 458765, 2, 0, 458766, 2, 0, 524291, 2, 0, 524292, 2, 0, 524293, 2, 0, 524294, 2, 0, 524295, 2, 0, 524296, 2, 0, 524297, 2, 0, 524298, 2, 0, 524299, 2, 0, 524300, 2, 0, 524301, 2, 0, 524302, 2, 0, 524303, 2, 0, 524304, 2, 0 )
-script = ExtResource( 14 )
+script = ExtResource( 2 )
 
 [node name="CollapseSpriteContainer" type="Node2D" parent="Grid"]
 
-[node name="Phantom27" parent="Grid" instance=ExtResource( 11 )]
-position = Vector2( 800, 413 )
-type = 3
-enemy_type = 5
-
-[node name="Phantom28" parent="Grid" instance=ExtResource( 11 )]
-position = Vector2( 863, 286 )
-type = 3
-enemy_type = 5
-
-[node name="Phantom29" parent="Grid" instance=ExtResource( 11 )]
-position = Vector2( 926, 288 )
-type = 3
-enemy_type = 5
-
-[node name="Phantom30" parent="Grid" instance=ExtResource( 11 )]
-position = Vector2( 737, 542 )
-type = 3
-enemy_type = 5
-
-[node name="Phantom31" parent="Grid" instance=ExtResource( 11 )]
-position = Vector2( 672, 287 )
-type = 3
-enemy_type = 5
-
-[node name="Phantom32" parent="Grid" instance=ExtResource( 11 )]
-type = 3
-enemy_type = 5
-
-[node name="Phantom33" parent="Grid" instance=ExtResource( 11 )]
-position = Vector2( 928, 419 )
-type = 3
-enemy_type = 5
-
-[node name="Phantom1" parent="Grid" instance=ExtResource( 11 )]
-position = Vector2( 226, 285 )
-type = 3
-enemy_type = 5
-
-[node name="Phantom2" parent="Grid" instance=ExtResource( 11 )]
-position = Vector2( 288, 354 )
-type = 3
-enemy_type = 5
-
-[node name="Phantom3" parent="Grid" instance=ExtResource( 11 )]
-position = Vector2( 288, 543 )
-type = 3
-enemy_type = 5
-
-[node name="Phantom4" parent="Grid" instance=ExtResource( 11 )]
-position = Vector2( 351, 478 )
-type = 3
-enemy_type = 5
-
-[node name="Phantom5" parent="Grid" instance=ExtResource( 11 )]
-position = Vector2( 415, 417 )
-type = 3
-enemy_type = 5
-
-[node name="Phantom6" parent="Grid" instance=ExtResource( 11 )]
-position = Vector2( 224, 413 )
-type = 3
-enemy_type = 5
-
-[node name="Phantom7" parent="Grid" instance=ExtResource( 11 )]
-position = Vector2( 223, 543 )
-type = 3
-enemy_type = 5
-
-[node name="Phantom8" parent="Grid" instance=ExtResource( 11 )]
-position = Vector2( 350, 351 )
-type = 3
-enemy_type = 5
-
-[node name="Phantom9" parent="Grid" instance=ExtResource( 11 )]
-position = Vector2( 549, 344 )
-type = 3
-enemy_type = 5
-
-[node name="Phantom10" parent="Grid" instance=ExtResource( 11 )]
-position = Vector2( 480, 546 )
-type = 3
-enemy_type = 5
-
-[node name="Phantom11" parent="Grid" instance=ExtResource( 11 )]
-position = Vector2( 479, 349 )
-type = 3
-enemy_type = 5
-
-[node name="Phantom12" parent="Grid" instance=ExtResource( 11 )]
-position = Vector2( 480, 288 )
-type = 3
-enemy_type = 5
-
-[node name="Phantom13" parent="Grid" instance=ExtResource( 11 )]
-position = Vector2( 419, 480 )
-type = 3
-enemy_type = 5
-
-[node name="Phantom14" parent="Grid" instance=ExtResource( 11 )]
-position = Vector2( 352, 288 )
-type = 3
-enemy_type = 5
-
-[node name="Phantom15" parent="Grid" instance=ExtResource( 11 )]
-position = Vector2( 864, 480 )
-type = 3
-enemy_type = 5
-
-[node name="Phantom16" parent="Grid" instance=ExtResource( 11 )]
-position = Vector2( 929, 542 )
-type = 3
-enemy_type = 5
-
-[node name="Phantom17" parent="Grid" instance=ExtResource( 11 )]
-position = Vector2( 800, 545 )
-type = 3
-enemy_type = 5
-
-[node name="Phantom18" parent="Grid" instance=ExtResource( 11 )]
-position = Vector2( 928, 357 )
-type = 3
-enemy_type = 5
-
-[node name="Phantom19" parent="Grid" instance=ExtResource( 11 )]
-position = Vector2( 801, 352 )
-type = 3
-enemy_type = 5
-
-[node name="Phantom20" parent="Grid" instance=ExtResource( 11 )]
-position = Vector2( 738, 481 )
-type = 3
-enemy_type = 5
-
-[node name="Phantom21" parent="Grid" instance=ExtResource( 11 )]
-position = Vector2( 607, 417 )
-type = 3
-enemy_type = 5
-
-[node name="Phantom22" parent="Grid" instance=ExtResource( 11 )]
-position = Vector2( 604, 285 )
-type = 3
-enemy_type = 5
-
-[node name="Phantom23" parent="Grid" instance=ExtResource( 11 )]
-position = Vector2( 612, 546 )
-type = 3
-enemy_type = 5
-
-[node name="Phantom24" parent="Grid" instance=ExtResource( 11 )]
-position = Vector2( 607, 481 )
-type = 3
-enemy_type = 5
-
-[node name="Phantom25" parent="Grid" instance=ExtResource( 11 )]
-position = Vector2( 547, 417 )
-type = 3
-enemy_type = 5
-
-[node name="Phantom26" parent="Grid" instance=ExtResource( 11 )]
+[node name="Phantom26" parent="Grid" instance=ExtResource( 13 )]
 position = Vector2( 804, 482 )
 type = 3
 enemy_type = 5
 
-[node name="Boss2" parent="Grid" instance=ExtResource( 11 )]
+[node name="Boss2" parent="Grid" instance=ExtResource( 13 )]
 position = Vector2( 1190, 462 )
 type = 3
 enemy_type = 4
 
 [node name="LadyangelBlackLeft" type="Sprite" parent="Grid"]
 position = Vector2( 1139, 204 )
-texture = ExtResource( 15 )
+texture = ExtResource( 12 )
 
 [node name="LadyangelBlackRight" type="Sprite" parent="Grid"]
 position = Vector2( 1225, 205 )
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 
 [node name="SelectorSprite" type="Sprite" parent="Grid"]
 visible = false
 modulate = Color( 0.478431, 0.478431, 0.478431, 0.439216 )
 position = Vector2( 608, 285 )
-texture = ExtResource( 10 )
+texture = ExtResource( 5 )
 
-[node name="Actor" parent="Grid" instance=ExtResource( 2 )]
+[node name="Actor" parent="Grid" instance=ExtResource( 14 )]
 position = Vector2( 290, 412 )
 
 [node name="Stair" type="Node2D" parent="Grid"]
 position = Vector2( 1055, 412 )
-script = ExtResource( 7 )
+script = ExtResource( 1 )
 type = 4
 
 [node name="Sprite" type="Sprite" parent="Grid/Stair"]
-texture = ExtResource( 17 )
+texture = ExtResource( 7 )
 
 [node name="CollapseOrder" type="Node2D" parent="Grid"]
 
@@ -825,17 +666,17 @@ margin_bottom = 426.0
 custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
 text = "5"
 
-[node name="UI" parent="." instance=ExtResource( 8 )]
+[node name="UI" parent="." instance=ExtResource( 15 )]
 
 [node name="AudioHit" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 4 )
+stream = ExtResource( 8 )
 
 [node name="AudioBuff" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 5 )
+stream = ExtResource( 9 )
 
 [node name="AudioWalk" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 3 )
+stream = ExtResource( 11 )
 
 [node name="BGM" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 1 )
+stream = ExtResource( 4 )
 autoplay = true

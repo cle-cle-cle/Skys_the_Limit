@@ -1,6 +1,6 @@
 extends Node
 
-var max_level = 2
+var max_level = 10
 
 # Level and steps
 export var current_level = 0
@@ -11,7 +11,13 @@ var steps = [
 	[8,8], # level 1
 	[8, 4, 3, 4, 2], # level 2
 	[4, 3, 5, 7, 1], # level 3
-	[], # level 3
+	[8, 4, 3, 4, 2], # level 4
+	[8, 4, 3, 4, 2], # level 5
+	[8, 4, 3, 4, 2], # level 6
+	[8, 4, 3, 4, 2], # level 7
+	[8, 4, 3, 4, 2], # level 8
+	[8, 4, 3, 4, 2], # level 9
+	[8, 4, 3, 4, 2], # level 10
 ]
 
 # Children
