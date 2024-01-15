@@ -9,8 +9,8 @@ onready var restart_game_button = $RestartGameButton
 # Save player stats from last level
 var saved_health = 100
 var saved_max_health = 100
-var saved_attack = 10
-var saved_defense = 10
+var saved_attack = 5
+var saved_defense = 5
 
 
 func _ready():
@@ -49,8 +49,8 @@ func _on_RestartGameButton_pressed():
 	# Reset All Player Stats
 	PlayerStats.health = 100
 	PlayerStats.max_health = 100
-	PlayerStats.attack = 10
-	PlayerStats.defense = 10
+	PlayerStats.attack = 5
+	PlayerStats.defense = 5
 	
 	get_tree().change_scene("res://game/code_source/levels/Level_0.tscn")
 

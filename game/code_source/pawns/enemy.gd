@@ -17,7 +17,7 @@ var defense = 1
 
 
 # Declare member variables here. Examples:
-enum ENEMY_TYPES{ GREEN, BLUE, PINK, ANGEL, BOSS, BOSS_PHT}
+enum ENEMY_TYPES{WEAK, GREEN, BLUE, PINK, ANGEL, BOSS, BOSS_PHT}
 export(ENEMY_TYPES) var enemy_type = ENEMY_TYPES.GREEN setget set_enemy_type
 
 
@@ -47,6 +47,8 @@ func _process(delta):
 
 func initialize_sprite():
 	match enemy_type:
+		ENEMY_TYPES.WEAK:
+			sprite.texture = preload("res://game/assets/slime_green.png")
 		ENEMY_TYPES.GREEN:
 			sprite.texture = preload("res://game/assets/slime_green.png")
 		ENEMY_TYPES.BLUE:
@@ -63,6 +65,11 @@ func initialize_sprite():
 
 func initialize_stats():
 	match enemy_type:
+		ENEMY_TYPES.WEAK:
+			health = 5
+			max_health = 5
+			attack = 10
+			defense = 5
 		ENEMY_TYPES.GREEN:
 			health = 10
 			max_health = 10

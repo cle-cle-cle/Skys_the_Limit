@@ -7,9 +7,10 @@ export var current_level = 0
 var current_turn = 0
 var remaining_steps = 0
 var steps = [
-	[8, 8], # level 0
-	[8, 4, 3, 4, 2], # level 1
-	[4, 3, 5, 7, 1], # level 2
+	[8], # level 0
+	[8,8], # level 1
+	[8, 4, 3, 4, 2], # level 2
+	[4, 3, 5, 7, 1], # level 3
 	[], # level 3
 ]
 
