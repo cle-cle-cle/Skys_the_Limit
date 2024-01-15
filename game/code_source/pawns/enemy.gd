@@ -17,7 +17,8 @@ var defense = 1
 
 
 # Declare member variables here. Examples:
-enum ENEMY_TYPES{WEAK, GREEN, BLUE, PINK, ANGEL, BOSS, BOSS_PHT}
+enum ENEMY_TYPES{WEAK, GREEN, BLUE, PINK, ANGEL, BOSS, BOSS_PHT, Bonus_1, 
+					Green_1, Blue_1, Pink_1, Green_2, Blue_2, Pink_2, Green_3, Blue_3, Pink_3, Bonus_2}
 export(ENEMY_TYPES) var enemy_type = ENEMY_TYPES.GREEN setget set_enemy_type
 
 
@@ -61,6 +62,29 @@ func initialize_sprite():
 			sprite.texture = preload("res://game/assets/ladyangel_black.png")
 		ENEMY_TYPES.BOSS_PHT:
 			sprite.texture = preload("res://game/assets/ladyangel_black_phantom.png")
+		ENEMY_TYPES.Green_1:
+			sprite.texture = preload("res://game/assets/slime_green.png")	
+		ENEMY_TYPES.Blue_1:
+			sprite.texture = preload("res://game/assets/slime_blue.png")
+		ENEMY_TYPES.Pink_1:
+			sprite.texture = preload("res://game/assets/slime_pink.png")	
+		ENEMY_TYPES.Bonus_1:
+			sprite.texture = preload("res://game/assets/slime_green.png")	
+		ENEMY_TYPES.Green_2:
+			sprite.texture = preload("res://game/assets/slime_green.png")	
+		ENEMY_TYPES.Blue_2:
+			sprite.texture = preload("res://game/assets/slime_blue.png")
+		ENEMY_TYPES.Pink_2:
+			sprite.texture = preload("res://game/assets/slime_pink.png")	
+		ENEMY_TYPES.Green_3:
+			sprite.texture = preload("res://game/assets/slime_green.png")	
+		ENEMY_TYPES.Blue_3:
+			sprite.texture = preload("res://game/assets/slime_blue.png")
+		ENEMY_TYPES.Pink_3:
+			sprite.texture = preload("res://game/assets/slime_pink.png")
+		ENEMY_TYPES.Bonus_2:
+			sprite.texture = preload("res://game/assets/slime_blue.png")		
+
 
 
 func initialize_stats():
@@ -100,6 +124,61 @@ func initialize_stats():
 			max_health = ''
 			attack = ''
 			defense = ''
+		ENEMY_TYPES.Green_1:
+			health = 15
+			max_health = 15
+			attack = 35
+			defense = 20
+		ENEMY_TYPES.Blue_1:
+			health = 15
+			max_health = 20
+			attack = 40
+			defense = 30
+		ENEMY_TYPES.Pink_1:
+			health = 15
+			max_health = 15
+			attack = 45
+			defense = 35
+		ENEMY_TYPES.Bonus_1:
+			health = 1
+			max_health = 1
+			attack = 19
+			defense = 34
+		ENEMY_TYPES.Green_2:
+			health = 60
+			max_health = 60
+			attack = 50
+			defense = 20
+		ENEMY_TYPES.Blue_2:
+			health = 35
+			max_health = 35
+			attack = 60
+			defense = 15
+		ENEMY_TYPES.Pink_2:
+			health = 40
+			max_health = 40
+			attack = 80
+			defense = 10
+		ENEMY_TYPES.Green_3:
+			health = 10
+			max_health = 10
+			attack = 70
+			defense = 70
+		ENEMY_TYPES.Blue_3:
+			health = 35
+			max_health = 35
+			attack = 60
+			defense = 15
+		ENEMY_TYPES.Pink_3:
+			health = 5
+			max_health = 5
+			attack = 90
+			defense = 80
+		ENEMY_TYPES.Bonus_2:
+			health = 1
+			max_health = 1
+			attack = 49
+			defense = 79
 
 
 func update_labels():

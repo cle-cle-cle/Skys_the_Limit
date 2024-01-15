@@ -1,0 +1,891 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://game/sounds/melody.wav" type="AudioStream" id=1]
+[ext_resource path="res://game/code_source/pawns/Actor.tscn" type="PackedScene" id=2]
+[ext_resource path="res://game/sounds/click.wav" type="AudioStream" id=3]
+[ext_resource path="res://game/sounds/hitHurt.wav" type="AudioStream" id=4]
+[ext_resource path="res://game/sounds/pickupCoin.wav" type="AudioStream" id=5]
+[ext_resource path="res://game/assets/backgrounds/bg_1.png" type="Texture" id=6]
+[ext_resource path="res://game/code_source/stair.gd" type="Script" id=7]
+[ext_resource path="res://game/code_source/ui.tscn" type="PackedScene" id=8]
+[ext_resource path="res://game/code_source/pawns/upgrade.tscn" type="PackedScene" id=9]
+[ext_resource path="res://game/assets/UI/selector.png" type="Texture" id=10]
+[ext_resource path="res://game/code_source/pawns/enemy.tscn" type="PackedScene" id=11]
+[ext_resource path="res://game/assets/grid/grid_tileset.tres" type="TileSet" id=12]
+[ext_resource path="res://game/code_source/level.gd" type="Script" id=13]
+[ext_resource path="res://game/code_source/grid.gd" type="Script" id=14]
+[ext_resource path="res://game/assets/stair.png" type="Texture" id=17]
+
+[sub_resource type="ParticlesMaterial" id=1]
+emission_shape = 2
+emission_box_extents = Vector3( 1, 360, 1 )
+flag_disable_z = true
+spread = 1.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = -10.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+
+[sub_resource type="ParticlesMaterial" id=2]
+emission_shape = 2
+emission_box_extents = Vector3( 1, 360, 1 )
+flag_disable_z = true
+spread = 1.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = -20.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale = 3.0
+
+[node name="Level_7" type="Node"]
+script = ExtResource( 13 )
+current_level = 7
+
+[node name="Background" type="TextureRect" parent="."]
+visible = false
+margin_left = -443.0
+margin_top = -353.0
+margin_right = 1605.0
+margin_bottom = 1183.0
+mouse_filter = 2
+texture = ExtResource( 6 )
+
+[node name="ParallaxParticleBG" type="Node2D" parent="."]
+
+[node name="Particles2D_back" type="Particles2D" parent="ParallaxParticleBG"]
+position = Vector2( 1301, 360 )
+z_index = -100
+amount = 300
+lifetime = 140.0
+preprocess = 280.0
+process_material = SubResource( 1 )
+
+[node name="Particles2D_mid" type="Particles2D" parent="ParallaxParticleBG"]
+position = Vector2( 1301, 360 )
+z_index = -100
+amount = 50
+lifetime = 140.0
+preprocess = 280.0
+process_material = SubResource( 2 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 639, 352 )
+current = true
+
+[node name="Grid" type="TileMap" parent="."]
+tile_set = ExtResource( 12 )
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+format = 1
+tile_data = PoolIntArray( 196614, 2, 0, 196615, 2, 0, 196616, 2, 0, 196617, 2, 0, 196618, 2, 0, 196619, 2, 0, 196620, 2, 0, 196621, 2, 0, 262147, 2, 0, 262148, 2, 0, 262149, 2, 0, 262150, 2, 0, 262151, 2, 0, 262152, 2, 0, 262154, 2, 0, 262155, 2, 0, 262157, 2, 0, 262158, 2, 0, 262159, 2, 0, 327683, 2, 0, 327684, 2, 0, 327685, 2, 0, 327687, 2, 0, 327688, 2, 0, 327690, 2, 0, 327691, 2, 0, 327693, 2, 0, 327694, 2, 0, 327695, 2, 0, 393219, 2, 0, 393220, 2, 0, 393221, 2, 0, 393223, 2, 0, 393224, 2, 0, 393225, 2, 0, 393226, 2, 0, 393227, 2, 0, 393229, 2, 0, 393230, 2, 0, 393231, 2, 0, 458755, 2, 0, 458756, 2, 0, 458757, 2, 0, 458759, 2, 0, 458760, 2, 0, 458762, 2, 0, 458763, 2, 0, 458765, 2, 0, 458766, 2, 0, 458767, 2, 0, 524291, 2, 0, 524292, 2, 0, 524293, 2, 0, 524295, 2, 0, 524296, 2, 0, 524298, 2, 0, 524299, 2, 0, 524300, 2, 0, 524301, 2, 0, 524302, 2, 0, 524303, 2, 0, 589829, 2, 0, 589830, 2, 0, 589831, 2, 0, 589832, 2, 0, 589833, 2, 0, 589834, 2, 0, 589835, 2, 0, 589836, 2, 0 )
+script = ExtResource( 14 )
+
+[node name="CollapseSpriteContainer" type="Node2D" parent="Grid"]
+
+[node name="SelectorSprite" type="Sprite" parent="Grid"]
+visible = false
+modulate = Color( 0.478431, 0.478431, 0.478431, 0.439216 )
+position = Vector2( 608, 285 )
+texture = ExtResource( 10 )
+
+[node name="Actor" parent="Grid" instance=ExtResource( 2 )]
+position = Vector2( 607, 413 )
+
+[node name="GreenSlime" parent="Grid" instance=ExtResource( 11 )]
+position = Vector2( 674, 413 )
+type = 3
+enemy_type = 14
+
+[node name="GreenSlime17" parent="Grid" instance=ExtResource( 11 )]
+position = Vector2( 674, 606 )
+type = 3
+enemy_type = 13
+
+[node name="GreenSlime18" parent="Grid" instance=ExtResource( 11 )]
+position = Vector2( 736, 477 )
+type = 3
+
+[node name="GreenSlime19" parent="Grid" instance=ExtResource( 11 )]
+position = Vector2( 674, 223 )
+type = 3
+enemy_type = 13
+
+[node name="GreenSlime20" parent="Grid" instance=ExtResource( 11 )]
+position = Vector2( 738, 354 )
+type = 3
+
+[node name="GreenSlime13" parent="Grid" instance=ExtResource( 11 )]
+position = Vector2( 484, 348 )
+type = 3
+enemy_type = 12
+
+[node name="GreenSlime14" parent="Grid" instance=ExtResource( 11 )]
+position = Vector2( 547, 350 )
+type = 3
+enemy_type = 12
+
+[node name="GreenSlime15" parent="Grid" instance=ExtResource( 11 )]
+position = Vector2( 547, 479 )
+type = 3
+enemy_type = 12
+
+[node name="GreenSlime16" parent="Grid" instance=ExtResource( 11 )]
+position = Vector2( 483, 477 )
+type = 3
+enemy_type = 12
+
+[node name="GreenSlime2" parent="Grid" instance=ExtResource( 11 )]
+position = Vector2( 419, 284 )
+type = 3
+enemy_type = 13
+
+[node name="GreenSlime11" parent="Grid" instance=ExtResource( 11 )]
+position = Vector2( 866, 287 )
+type = 3
+enemy_type = 14
+
+[node name="GreenSlime21" parent="Grid" instance=ExtResource( 11 )]
+position = Vector2( 993, 352 )
+type = 3
+enemy_type = 14
+
+[node name="GreenSlime32" parent="Grid" instance=ExtResource( 11 )]
+position = Vector2( 868, 413 )
+type = 3
+enemy_type = 13
+
+[node name="GreenSlime28" parent="Grid" instance=ExtResource( 11 )]
+position = Vector2( 931, 411 )
+type = 3
+enemy_type = 13
+
+[node name="GreenSlime29" parent="Grid" instance=ExtResource( 11 )]
+position = Vector2( 936, 539 )
+type = 3
+enemy_type = 13
+
+[node name="GreenSlime30" parent="Grid" instance=ExtResource( 11 )]
+position = Vector2( 998, 475 )
+type = 3
+enemy_type = 14
+
+[node name="GreenSlime22" parent="Grid" instance=ExtResource( 11 )]
+position = Vector2( 930, 285 )
+type = 3
+enemy_type = 13
+
+[node name="GreenSlime3" parent="Grid" instance=ExtResource( 11 )]
+position = Vector2( 802, 541 )
+type = 3
+enemy_type = 14
+
+[node name="GreenSlime6" parent="Grid" instance=ExtResource( 11 )]
+position = Vector2( 801, 607 )
+type = 3
+enemy_type = 14
+
+[node name="GreenSlime7" parent="Grid" instance=ExtResource( 11 )]
+position = Vector2( 870, 540 )
+type = 3
+enemy_type = 14
+
+[node name="GreenSlime4" parent="Grid" instance=ExtResource( 11 )]
+position = Vector2( 419, 605 )
+type = 3
+
+[node name="GreenSlime10" parent="Grid" instance=ExtResource( 11 )]
+position = Vector2( 355, 606 )
+type = 3
+
+[node name="GreenSlime23" parent="Grid" instance=ExtResource( 11 )]
+position = Vector2( 353, 351 )
+type = 3
+enemy_type = 12
+
+[node name="GreenSlime24" parent="Grid" instance=ExtResource( 11 )]
+position = Vector2( 228, 544 )
+type = 3
+enemy_type = 12
+
+[node name="GreenSlime25" parent="Grid" instance=ExtResource( 11 )]
+position = Vector2( 293, 416 )
+type = 3
+enemy_type = 12
+
+[node name="GreenSlime26" parent="Grid" instance=ExtResource( 11 )]
+position = Vector2( 227, 353 )
+type = 3
+enemy_type = 13
+
+[node name="GreenSlime27" parent="Grid" instance=ExtResource( 11 )]
+position = Vector2( 288, 482 )
+type = 3
+enemy_type = 12
+
+[node name="GreenSlime5" parent="Grid" instance=ExtResource( 11 )]
+position = Vector2( 801, 222 )
+type = 3
+enemy_type = 14
+
+[node name="GreenSlime8" parent="Grid" instance=ExtResource( 11 )]
+position = Vector2( 355, 283 )
+type = 3
+enemy_type = 13
+
+[node name="GreenSlime9" parent="Grid" instance=ExtResource( 11 )]
+position = Vector2( 865, 222 )
+type = 3
+enemy_type = 14
+
+[node name="HP_10_g" parent="Grid" instance=ExtResource( 9 )]
+position = Vector2( 481, 535 )
+upgrade_type = 2
+value = 5
+
+[node name="HP_10_g3" parent="Grid" instance=ExtResource( 9 )]
+position = Vector2( 734, 413 )
+upgrade_type = 2
+value = 10
+
+[node name="HP_10_g4" parent="Grid" instance=ExtResource( 9 )]
+position = Vector2( 675, 472 )
+upgrade_type = 0
+value = 10
+
+[node name="HP_10_g6" parent="Grid" instance=ExtResource( 9 )]
+position = Vector2( 352, 538 )
+upgrade_type = 0
+value = 30
+
+[node name="HP_10_g11" parent="Grid" instance=ExtResource( 9 )]
+position = Vector2( 865, 346 )
+upgrade_type = 0
+value = 30
+
+[node name="HP_10_g12" parent="Grid" instance=ExtResource( 9 )]
+position = Vector2( 863, 473 )
+upgrade_type = 0
+value = 20
+
+[node name="HP_10_g14" parent="Grid" instance=ExtResource( 9 )]
+position = Vector2( 546, 409 )
+upgrade_type = 0
+value = 100
+
+[node name="HP_10_g13" parent="Grid" instance=ExtResource( 9 )]
+position = Vector2( 991, 537 )
+upgrade_type = 3
+value = 10
+
+[node name="HP_10_g8" parent="Grid" instance=ExtResource( 9 )]
+position = Vector2( 288, 348 )
+upgrade_type = 0
+value = 30
+
+[node name="HP_10_g9" parent="Grid" instance=ExtResource( 9 )]
+position = Vector2( 228, 475 )
+upgrade_type = 3
+value = 10
+
+[node name="HP_10_g10" parent="Grid" instance=ExtResource( 9 )]
+position = Vector2( 353, 409 )
+upgrade_type = 3
+value = 5
+
+[node name="HP_10_g7" parent="Grid" instance=ExtResource( 9 )]
+position = Vector2( 226, 281 )
+value = 100
+
+[node name="HP_10_g2" parent="Grid" instance=ExtResource( 9 )]
+position = Vector2( 543, 283 )
+upgrade_type = 3
+value = 5
+
+[node name="HP_10_g5" parent="Grid" instance=ExtResource( 9 )]
+position = Vector2( 674, 345 )
+upgrade_type = 0
+value = 10
+
+[node name="Stair" type="Node2D" parent="Grid"]
+position = Vector2( 995, 280 )
+script = ExtResource( 7 )
+type = 4
+
+[node name="Sprite" type="Sprite" parent="Grid/Stair"]
+texture = ExtResource( 17 )
+
+[node name="CollapseOrder" type="Node2D" parent="Grid"]
+
+[node name="1" type="Node2D" parent="Grid/CollapseOrder"]
+
+[node name="Label" type="Label" parent="Grid/CollapseOrder/1"]
+margin_left = 585.0
+margin_top = 406.0
+margin_right = 625.0
+margin_bottom = 420.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "1"
+
+[node name="2" type="Node2D" parent="Grid/CollapseOrder"]
+visible = false
+
+[node name="Label" type="Label" parent="Grid/CollapseOrder/2"]
+margin_left = 529.0
+margin_top = 407.0
+margin_right = 569.0
+margin_bottom = 421.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "2"
+
+[node name="Label3" type="Label" parent="Grid/CollapseOrder/2"]
+margin_left = 528.0
+margin_top = 349.0
+margin_right = 568.0
+margin_bottom = 363.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "2"
+
+[node name="Label2" type="Label" parent="Grid/CollapseOrder/2"]
+margin_left = 533.0
+margin_top = 280.0
+margin_right = 573.0
+margin_bottom = 294.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "2"
+
+[node name="Label4" type="Label" parent="Grid/CollapseOrder/2"]
+margin_left = 532.0
+margin_top = 474.0
+margin_right = 572.0
+margin_bottom = 488.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "2"
+
+[node name="Label5" type="Label" parent="Grid/CollapseOrder/2"]
+margin_left = 539.0
+margin_top = 540.0
+margin_right = 579.0
+margin_bottom = 554.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "2"
+
+[node name="Label7" type="Label" parent="Grid/CollapseOrder/2"]
+margin_left = 465.0
+margin_top = 406.0
+margin_right = 505.0
+margin_bottom = 420.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "2"
+
+[node name="Label8" type="Label" parent="Grid/CollapseOrder/2"]
+margin_left = 464.0
+margin_top = 348.0
+margin_right = 504.0
+margin_bottom = 362.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "2"
+
+[node name="Label9" type="Label" parent="Grid/CollapseOrder/2"]
+margin_left = 469.0
+margin_top = 279.0
+margin_right = 509.0
+margin_bottom = 293.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "2"
+
+[node name="Label10" type="Label" parent="Grid/CollapseOrder/2"]
+margin_left = 468.0
+margin_top = 473.0
+margin_right = 508.0
+margin_bottom = 487.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "2"
+
+[node name="Label11" type="Label" parent="Grid/CollapseOrder/2"]
+margin_left = 475.0
+margin_top = 539.0
+margin_right = 515.0
+margin_bottom = 553.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "2"
+
+[node name="3" type="Node2D" parent="Grid/CollapseOrder"]
+visible = false
+
+[node name="Label3" type="Label" parent="Grid/CollapseOrder/3"]
+margin_left = 667.0
+margin_top = 280.0
+margin_right = 707.0
+margin_bottom = 294.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "3"
+
+[node name="Label4" type="Label" parent="Grid/CollapseOrder/3"]
+margin_left = 663.0
+margin_top = 348.0
+margin_right = 703.0
+margin_bottom = 362.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "3"
+
+[node name="Label5" type="Label" parent="Grid/CollapseOrder/3"]
+margin_left = 667.0
+margin_top = 410.0
+margin_right = 707.0
+margin_bottom = 424.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "3"
+
+[node name="Label6" type="Label" parent="Grid/CollapseOrder/3"]
+margin_left = 664.0
+margin_top = 470.0
+margin_right = 704.0
+margin_bottom = 484.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "3"
+
+[node name="Label7" type="Label" parent="Grid/CollapseOrder/3"]
+margin_left = 668.0
+margin_top = 532.0
+margin_right = 708.0
+margin_bottom = 546.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "3"
+
+[node name="Label8" type="Label" parent="Grid/CollapseOrder/3"]
+margin_left = 726.0
+margin_top = 280.0
+margin_right = 766.0
+margin_bottom = 294.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "3"
+
+[node name="Label13" type="Label" parent="Grid/CollapseOrder/3"]
+margin_left = 666.0
+margin_top = 601.0
+margin_right = 706.0
+margin_bottom = 615.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "3"
+
+[node name="Label14" type="Label" parent="Grid/CollapseOrder/3"]
+margin_left = 725.0
+margin_top = 601.0
+margin_right = 765.0
+margin_bottom = 615.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "3"
+
+[node name="Label9" type="Label" parent="Grid/CollapseOrder/3"]
+margin_left = 722.0
+margin_top = 348.0
+margin_right = 762.0
+margin_bottom = 362.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "3"
+
+[node name="Label10" type="Label" parent="Grid/CollapseOrder/3"]
+margin_left = 726.0
+margin_top = 410.0
+margin_right = 766.0
+margin_bottom = 424.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "3"
+
+[node name="Label11" type="Label" parent="Grid/CollapseOrder/3"]
+margin_left = 723.0
+margin_top = 470.0
+margin_right = 763.0
+margin_bottom = 484.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "3"
+
+[node name="Label12" type="Label" parent="Grid/CollapseOrder/3"]
+margin_left = 729.0
+margin_top = 533.0
+margin_right = 769.0
+margin_bottom = 547.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "3"
+
+[node name="Label15" type="Label" parent="Grid/CollapseOrder/3"]
+margin_left = 787.0
+margin_top = 602.0
+margin_right = 827.0
+margin_bottom = 616.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "3"
+
+[node name="Label17" type="Label" parent="Grid/CollapseOrder/3"]
+margin_left = 538.0
+margin_top = 602.0
+margin_right = 578.0
+margin_bottom = 616.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "3"
+
+[node name="Label18" type="Label" parent="Grid/CollapseOrder/3"]
+margin_left = 600.0
+margin_top = 603.0
+margin_right = 640.0
+margin_bottom = 617.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "3"
+
+[node name="Label19" type="Label" parent="Grid/CollapseOrder/3"]
+margin_left = 406.0
+margin_top = 603.0
+margin_right = 446.0
+margin_bottom = 617.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "3"
+
+[node name="Label20" type="Label" parent="Grid/CollapseOrder/3"]
+margin_left = 468.0
+margin_top = 604.0
+margin_right = 508.0
+margin_bottom = 618.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "3"
+
+[node name="Label16" type="Label" parent="Grid/CollapseOrder/3"]
+margin_left = 791.0
+margin_top = 534.0
+margin_right = 831.0
+margin_bottom = 548.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "3"
+
+[node name="4" type="Node2D" parent="Grid/CollapseOrder"]
+visible = false
+
+[node name="Label" type="Label" parent="Grid/CollapseOrder/4"]
+margin_left = 349.0
+margin_top = 604.0
+margin_right = 389.0
+margin_bottom = 618.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "4"
+
+[node name="Label2" type="Label" parent="Grid/CollapseOrder/4"]
+margin_left = 343.0
+margin_top = 540.0
+margin_right = 383.0
+margin_bottom = 554.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "4"
+
+[node name="Label3" type="Label" parent="Grid/CollapseOrder/4"]
+margin_left = 347.0
+margin_top = 476.0
+margin_right = 387.0
+margin_bottom = 490.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "4"
+
+[node name="Label4" type="Label" parent="Grid/CollapseOrder/4"]
+margin_left = 345.0
+margin_top = 413.0
+margin_right = 385.0
+margin_bottom = 427.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "4"
+
+[node name="Label5" type="Label" parent="Grid/CollapseOrder/4"]
+margin_left = 344.0
+margin_top = 344.0
+margin_right = 384.0
+margin_bottom = 358.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "4"
+
+[node name="Label6" type="Label" parent="Grid/CollapseOrder/4"]
+margin_left = 343.0
+margin_top = 280.0
+margin_right = 382.0
+margin_bottom = 294.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "4"
+
+[node name="Label7" type="Label" parent="Grid/CollapseOrder/4"]
+margin_left = 277.0
+margin_top = 538.0
+margin_right = 317.0
+margin_bottom = 552.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "4"
+
+[node name="Label8" type="Label" parent="Grid/CollapseOrder/4"]
+margin_left = 281.0
+margin_top = 474.0
+margin_right = 321.0
+margin_bottom = 488.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "4"
+
+[node name="Label9" type="Label" parent="Grid/CollapseOrder/4"]
+margin_left = 279.0
+margin_top = 411.0
+margin_right = 319.0
+margin_bottom = 425.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "4"
+
+[node name="Label10" type="Label" parent="Grid/CollapseOrder/4"]
+margin_left = 278.0
+margin_top = 342.0
+margin_right = 318.0
+margin_bottom = 356.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "4"
+
+[node name="Label11" type="Label" parent="Grid/CollapseOrder/4"]
+margin_left = 277.0
+margin_top = 278.0
+margin_right = 316.0
+margin_bottom = 292.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "4"
+
+[node name="Label12" type="Label" parent="Grid/CollapseOrder/4"]
+margin_left = 215.0
+margin_top = 542.0
+margin_right = 255.0
+margin_bottom = 556.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "4"
+
+[node name="Label13" type="Label" parent="Grid/CollapseOrder/4"]
+margin_left = 219.0
+margin_top = 478.0
+margin_right = 259.0
+margin_bottom = 492.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "4"
+
+[node name="Label14" type="Label" parent="Grid/CollapseOrder/4"]
+margin_left = 217.0
+margin_top = 415.0
+margin_right = 257.0
+margin_bottom = 429.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "4"
+
+[node name="Label15" type="Label" parent="Grid/CollapseOrder/4"]
+margin_left = 216.0
+margin_top = 346.0
+margin_right = 256.0
+margin_bottom = 360.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "4"
+
+[node name="Label16" type="Label" parent="Grid/CollapseOrder/4"]
+margin_left = 215.0
+margin_top = 282.0
+margin_right = 254.0
+margin_bottom = 296.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "4"
+
+[node name="5" type="Node2D" parent="Grid/CollapseOrder"]
+visible = false
+
+[node name="Label" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 857.0
+margin_top = 219.0
+margin_right = 897.0
+margin_bottom = 233.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+[node name="Label3" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 406.0
+margin_top = 216.0
+margin_right = 446.0
+margin_bottom = 230.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+[node name="Label4" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 596.0
+margin_top = 217.0
+margin_right = 636.0
+margin_bottom = 231.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+[node name="Label8" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 463.0
+margin_top = 217.0
+margin_right = 503.0
+margin_bottom = 231.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+[node name="Label9" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 653.0
+margin_top = 218.0
+margin_right = 693.0
+margin_bottom = 232.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+[node name="Label10" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 404.0
+margin_top = 280.0
+margin_right = 444.0
+margin_bottom = 294.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+[node name="Label13" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 530.0
+margin_top = 217.0
+margin_right = 570.0
+margin_bottom = 231.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+[node name="Label14" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 720.0
+margin_top = 218.0
+margin_right = 760.0
+margin_bottom = 232.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+[node name="Label16" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 793.0
+margin_top = 217.0
+margin_right = 833.0
+margin_bottom = 231.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+[node name="6" type="Node2D" parent="Grid/CollapseOrder"]
+visible = false
+
+[node name="Label" type="Label" parent="Grid/CollapseOrder/6"]
+margin_left = 857.0
+margin_top = 283.0
+margin_right = 897.0
+margin_bottom = 297.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "6"
+
+[node name="Label3" type="Label" parent="Grid/CollapseOrder/6"]
+margin_left = 917.0
+margin_top = 285.0
+margin_right = 957.0
+margin_bottom = 299.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "6"
+
+[node name="Label4" type="Label" parent="Grid/CollapseOrder/6"]
+margin_left = 861.0
+margin_top = 346.0
+margin_right = 901.0
+margin_bottom = 360.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "6"
+
+[node name="Label8" type="Label" parent="Grid/CollapseOrder/6"]
+margin_left = 925.0
+margin_top = 345.0
+margin_right = 965.0
+margin_bottom = 359.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "6"
+
+[node name="Label9" type="Label" parent="Grid/CollapseOrder/6"]
+margin_left = 984.0
+margin_top = 347.0
+margin_right = 1024.0
+margin_bottom = 361.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "6"
+
+[node name="Label10" type="Label" parent="Grid/CollapseOrder/6"]
+margin_left = 861.0
+margin_top = 409.0
+margin_right = 901.0
+margin_bottom = 423.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "6"
+
+[node name="Label13" type="Label" parent="Grid/CollapseOrder/6"]
+margin_left = 922.0
+margin_top = 411.0
+margin_right = 962.0
+margin_bottom = 425.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "6"
+
+[node name="Label14" type="Label" parent="Grid/CollapseOrder/6"]
+margin_left = 987.0
+margin_top = 410.0
+margin_right = 1027.0
+margin_bottom = 424.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "6"
+
+[node name="Label11" type="Label" parent="Grid/CollapseOrder/6"]
+margin_left = 855.0
+margin_top = 538.0
+margin_right = 895.0
+margin_bottom = 552.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "6"
+
+[node name="Label15" type="Label" parent="Grid/CollapseOrder/6"]
+margin_left = 916.0
+margin_top = 540.0
+margin_right = 956.0
+margin_bottom = 554.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "6"
+
+[node name="Label16" type="Label" parent="Grid/CollapseOrder/6"]
+margin_left = 981.0
+margin_top = 539.0
+margin_right = 1021.0
+margin_bottom = 553.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "6"
+
+[node name="Label12" type="Label" parent="Grid/CollapseOrder/6"]
+margin_left = 857.0
+margin_top = 471.0
+margin_right = 897.0
+margin_bottom = 485.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "6"
+
+[node name="Label17" type="Label" parent="Grid/CollapseOrder/6"]
+margin_left = 918.0
+margin_top = 473.0
+margin_right = 958.0
+margin_bottom = 487.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "6"
+
+[node name="Label18" type="Label" parent="Grid/CollapseOrder/6"]
+margin_left = 983.0
+margin_top = 472.0
+margin_right = 1023.0
+margin_bottom = 486.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "6"
+
+[node name="UI" parent="." instance=ExtResource( 8 )]
+
+[node name="AudioHit" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )
+
+[node name="AudioBuff" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+
+[node name="AudioWalk" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )

@@ -39,9 +39,9 @@ orbit_velocity = 0.0
 orbit_velocity_random = 0.0
 scale = 3.0
 
-[node name="Level_1" type="Node"]
+[node name="Level_2" type="Node"]
 script = ExtResource( 13 )
-current_level = 1
+current_level = 2
 
 [node name="Background" type="TextureRect" parent="."]
 visible = false
@@ -111,37 +111,30 @@ type = 3
 [node name="BlueSlime" parent="Grid" instance=ExtResource( 11 )]
 position = Vector2( 738, 347 )
 type = 3
-enemy_type = 1
 
 [node name="BlueSlime2" parent="Grid" instance=ExtResource( 11 )]
 position = Vector2( 738, 477 )
 type = 3
-enemy_type = 1
 
 [node name="BlueSlime3" parent="Grid" instance=ExtResource( 11 )]
 position = Vector2( 545, 477 )
 type = 3
-enemy_type = 1
 
 [node name="BlueSlime4" parent="Grid" instance=ExtResource( 11 )]
 position = Vector2( 610, 541 )
 type = 3
-enemy_type = 1
 
 [node name="BlueSlime5" parent="Grid" instance=ExtResource( 11 )]
 position = Vector2( 865, 283 )
 type = 3
-enemy_type = 1
 
 [node name="BlueSlime6" parent="Grid" instance=ExtResource( 11 )]
 position = Vector2( 930, 347 )
 type = 3
-enemy_type = 1
 
 [node name="BlueSlime7" parent="Grid" instance=ExtResource( 11 )]
 position = Vector2( 930, 478 )
 type = 3
-enemy_type = 1
 
 [node name="PinkSlime" parent="Grid" instance=ExtResource( 11 )]
 position = Vector2( 1122, 285 )
@@ -215,7 +208,6 @@ value = 10
 
 [node name="ATK_Treasure" parent="Grid" instance=ExtResource( 9 )]
 position = Vector2( 1121, 414 )
-upgrade_type = 2
 value = 200
 
 [node name="ATK_5e" parent="Grid" instance=ExtResource( 9 )]

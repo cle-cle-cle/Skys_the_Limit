@@ -1,17 +1,23 @@
 extends Node
 
-var max_level = 2
+var max_level = 10
 
 # Level and steps
 export var current_level = 0
 var current_turn = 0
 var remaining_steps = 0
 var steps = [
-	[8], # level 0
+	[6,2], # level 0
 	[8,8], # level 1
 	[8, 4, 3, 4, 2], # level 2
 	[4, 3, 5, 7, 1], # level 3
-	[], # level 3
+	[2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2], # level 4
+	[8, 5, 3, 3], # level 5
+	[15, 9, 8, 10], # level 6
+	[1, 10, 14, 16, 32], # level 7
+	[2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2], # level 8
+	[1,1,1,1,1], # level 9
+	[8, 4, 3, 4, 2], # level 10
 ]
 
 # Children
@@ -81,7 +87,7 @@ func _ready():
 
 	
 	# Fresh Turn
-	if current_level < 3:
+	if current_level < 10:
 		remaining_steps = steps[current_level][current_turn]
 	
 	# Initialize UI
@@ -177,7 +183,7 @@ func update_labels():
 
 func _on_Actor_step_consumed():
 	$AudioWalk.play()
-	if current_level < 3: # don;t collapse ground for final level
+	if current_level < 10: # don;t collapse ground for final level
 		remaining_steps -= 1
 		if remaining_steps == 0:
 			print("turn" + String(current_turn) + "over")

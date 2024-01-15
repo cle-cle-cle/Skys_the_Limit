@@ -66,6 +66,7 @@ func request_move(pawn, direction):
 			# Move Actor
 			return update_pawn_position(pawn, cell_start, cell_target)
 		ENEMY:
+			pass
 			if get_cell_pawn(cell_target):
 				var enemy_pawn = get_cell_pawn(cell_target)
 				print("Cell %s contains %s" % [cell_target, enemy_pawn.name])
