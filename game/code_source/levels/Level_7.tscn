@@ -191,10 +191,12 @@ enemy_type = 14
 [node name="GreenSlime4" parent="Grid" instance=ExtResource( 11 )]
 position = Vector2( 419, 605 )
 type = 3
+enemy_type = 2
 
 [node name="GreenSlime10" parent="Grid" instance=ExtResource( 11 )]
 position = Vector2( 355, 606 )
 type = 3
+enemy_type = 2
 
 [node name="GreenSlime23" parent="Grid" instance=ExtResource( 11 )]
 position = Vector2( 353, 351 )
@@ -326,7 +328,6 @@ custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
 text = "1"
 
 [node name="2" type="Node2D" parent="Grid/CollapseOrder"]
-visible = false
 
 [node name="Label" type="Label" parent="Grid/CollapseOrder/2"]
 margin_left = 529.0
@@ -409,7 +410,6 @@ custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
 text = "2"
 
 [node name="3" type="Node2D" parent="Grid/CollapseOrder"]
-visible = false
 
 [node name="Label3" type="Label" parent="Grid/CollapseOrder/3"]
 margin_left = 667.0
@@ -556,7 +556,6 @@ custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
 text = "3"
 
 [node name="4" type="Node2D" parent="Grid/CollapseOrder"]
-visible = false
 
 [node name="Label" type="Label" parent="Grid/CollapseOrder/4"]
 margin_left = 349.0
@@ -687,7 +686,6 @@ custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
 text = "4"
 
 [node name="5" type="Node2D" parent="Grid/CollapseOrder"]
-visible = false
 
 [node name="Label" type="Label" parent="Grid/CollapseOrder/5"]
 margin_left = 857.0
@@ -762,7 +760,6 @@ custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
 text = "5"
 
 [node name="6" type="Node2D" parent="Grid/CollapseOrder"]
-visible = false
 
 [node name="Label" type="Label" parent="Grid/CollapseOrder/6"]
 margin_left = 857.0

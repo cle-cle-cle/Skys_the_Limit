@@ -70,6 +70,10 @@ lifetime = 140.0
 preprocess = 280.0
 process_material = SubResource( 2 )
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 639, 352 )
+current = true
+
 [node name="Grid" type="TileMap" parent="."]
 tile_set = ExtResource( 12 )
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
@@ -193,7 +197,7 @@ value = 5
 [node name="ATT_2" parent="Grid" instance=ExtResource( 9 )]
 position = Vector2( 930, 417 )
 upgrade_type = 2
-value = 10
+value = 5
 
 [node name="HP_6" parent="Grid" instance=ExtResource( 9 )]
 position = Vector2( 738, 345 )
@@ -348,7 +352,7 @@ margin_bottom = 421.0
 custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
 text = "1"
 
-[node name="Label21" type="Label" parent="Grid/CollapseOrder/1"]
+[node name="Label66" type="Label" parent="Grid/CollapseOrder/1"]
 margin_left = 541.0
 margin_top = 407.0
 margin_right = 581.0
@@ -377,6 +381,14 @@ margin_left = 542.0
 margin_top = 536.0
 margin_right = 582.0
 margin_bottom = 550.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "1"
+
+[node name="Label24" type="Label" parent="Grid/CollapseOrder/1"]
+margin_left = 414.0
+margin_top = 475.0
+margin_right = 454.0
+margin_bottom = 489.0
 custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
 text = "1"
 
@@ -561,8 +573,6 @@ margin_right = 1017.0
 margin_bottom = 423.0
 custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
 text = "4"
-
-[node name="5" type="Node2D" parent="Grid/CollapseOrder"]
 
 [node name="UI" parent="." instance=ExtResource( 8 )]
 

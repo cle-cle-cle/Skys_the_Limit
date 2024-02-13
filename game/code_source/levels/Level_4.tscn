@@ -116,11 +116,19 @@ texture = ExtResource( 17 )
 
 [node name="1" type="Node2D" parent="Grid/CollapseOrder"]
 
-[node name="Label8" type="Label" parent="Grid/CollapseOrder/1"]
+[node name="Label11" type="Label" parent="Grid/CollapseOrder/1"]
 margin_left = 213.0
 margin_top = 474.0
 margin_right = 253.0
 margin_bottom = 488.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "1"
+
+[node name="Label12" type="Label" parent="Grid/CollapseOrder/1"]
+margin_left = 215.0
+margin_top = 344.0
+margin_right = 255.0
+margin_bottom = 358.0
 custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
 text = "1"
 
@@ -129,14 +137,6 @@ margin_left = 214.0
 margin_top = 415.0
 margin_right = 254.0
 margin_bottom = 429.0
-custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
-text = "1"
-
-[node name="Label9" type="Label" parent="Grid/CollapseOrder/1"]
-margin_left = 211.0
-margin_top = 347.0
-margin_right = 251.0
-margin_bottom = 361.0
 custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
 text = "1"
 
