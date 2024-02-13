@@ -184,6 +184,42 @@ type = 4
 position = Vector2( -2, -3 )
 texture = ExtResource( 14 )
 
+[node name="Sprite3" type="Sprite" parent="Grid/Fences"]
+position = Vector2( 290, 192 )
+texture = ExtResource( 15 )
+
+[node name="Sprite4" type="Sprite" parent="Grid/Fences"]
+position = Vector2( 361, 194 )
+texture = ExtResource( 15 )
+
+[node name="Sprite5" type="Sprite" parent="Grid/Fences"]
+position = Vector2( 1210, 352 )
+texture = ExtResource( 16 )
+
+[node name="Sprite6" type="Sprite" parent="Grid/Fences"]
+position = Vector2( 1209, 431 )
+texture = ExtResource( 16 )
+
+[node name="Sprite7" type="Sprite" parent="Grid/Fences"]
+position = Vector2( 142, 191 )
+texture = ExtResource( 15 )
+
+[node name="Sprite8" type="Sprite" parent="Grid/Fences"]
+position = Vector2( 142, 218 )
+texture = ExtResource( 15 )
+
+[node name="Sprite9" type="Sprite" parent="Grid/Fences"]
+position = Vector2( 214, 217 )
+texture = ExtResource( 15 )
+
+[node name="Sprite10" type="Sprite" parent="Grid/Fences"]
+position = Vector2( 290, 223 )
+texture = ExtResource( 15 )
+
+[node name="Sprite11" type="Sprite" parent="Grid/Fences"]
+position = Vector2( 364, 223 )
+texture = ExtResource( 15 )
+
 [node name="CollapseOrder" type="Node2D" parent="Grid"]
 
 [node name="1" type="Node2D" parent="Grid/CollapseOrder"]
@@ -193,6 +229,14 @@ margin_left = 467.0
 margin_top = 725.0
 margin_right = 507.0
 margin_bottom = 739.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "1"
+
+[node name="Label25" type="Label" parent="Grid/CollapseOrder/1"]
+margin_left = 416.0
+margin_top = 538.0
+margin_right = 456.0
+margin_bottom = 552.0
 custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
 text = "1"
 
@@ -206,6 +250,118 @@ margin_bottom = 737.0
 custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
 text = "2"
 
+[node name="Label2" type="Label" parent="Grid/CollapseOrder/2"]
+margin_left = 482.0
+margin_top = 348.0
+margin_right = 522.0
+margin_bottom = 362.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "2"
+
+[node name="Label3" type="Label" parent="Grid/CollapseOrder/2"]
+margin_left = 482.0
+margin_top = 415.0
+margin_right = 522.0
+margin_bottom = 429.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "2"
+
+[node name="Label4" type="Label" parent="Grid/CollapseOrder/2"]
+margin_left = 482.0
+margin_top = 480.0
+margin_right = 522.0
+margin_bottom = 494.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "2"
+
+[node name="Label5" type="Label" parent="Grid/CollapseOrder/2"]
+margin_left = 482.0
+margin_top = 539.0
+margin_right = 522.0
+margin_bottom = 553.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "2"
+
+[node name="Label6" type="Label" parent="Grid/CollapseOrder/2"]
+margin_left = 544.0
+margin_top = 285.0
+margin_right = 584.0
+margin_bottom = 299.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "2"
+
+[node name="Label7" type="Label" parent="Grid/CollapseOrder/2"]
+margin_left = 544.0
+margin_top = 348.0
+margin_right = 584.0
+margin_bottom = 362.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "2"
+
+[node name="Label8" type="Label" parent="Grid/CollapseOrder/2"]
+margin_left = 544.0
+margin_top = 415.0
+margin_right = 584.0
+margin_bottom = 429.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "2"
+
+[node name="Label9" type="Label" parent="Grid/CollapseOrder/2"]
+margin_left = 544.0
+margin_top = 480.0
+margin_right = 584.0
+margin_bottom = 494.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "2"
+
+[node name="Label10" type="Label" parent="Grid/CollapseOrder/2"]
+margin_left = 544.0
+margin_top = 539.0
+margin_right = 584.0
+margin_bottom = 553.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "2"
+
+[node name="Label11" type="Label" parent="Grid/CollapseOrder/2"]
+margin_left = 603.0
+margin_top = 288.0
+margin_right = 643.0
+margin_bottom = 302.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "2"
+
+[node name="Label12" type="Label" parent="Grid/CollapseOrder/2"]
+margin_left = 603.0
+margin_top = 351.0
+margin_right = 643.0
+margin_bottom = 365.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "2"
+
+[node name="Label13" type="Label" parent="Grid/CollapseOrder/2"]
+margin_left = 603.0
+margin_top = 414.0
+margin_right = 643.0
+margin_bottom = 428.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "2"
+
+[node name="Label14" type="Label" parent="Grid/CollapseOrder/2"]
+margin_left = 603.0
+margin_top = 480.0
+margin_right = 643.0
+margin_bottom = 494.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "2"
+
+[node name="Label15" type="Label" parent="Grid/CollapseOrder/2"]
+margin_left = 603.0
+margin_top = 539.0
+margin_right = 643.0
+margin_bottom = 553.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "2"
+
 [node name="3" type="Node2D" parent="Grid/CollapseOrder"]
 
 [node name="Label" type="Label" parent="Grid/CollapseOrder/3"]
@@ -213,6 +369,94 @@ margin_left = 597.0
 margin_top = 722.0
 margin_right = 637.0
 margin_bottom = 736.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "3"
+
+[node name="Label2" type="Label" parent="Grid/CollapseOrder/3"]
+margin_left = 668.0
+margin_top = 351.0
+margin_right = 708.0
+margin_bottom = 365.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "3"
+
+[node name="Label3" type="Label" parent="Grid/CollapseOrder/3"]
+margin_left = 668.0
+margin_top = 414.0
+margin_right = 708.0
+margin_bottom = 428.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "3"
+
+[node name="Label4" type="Label" parent="Grid/CollapseOrder/3"]
+margin_left = 668.0
+margin_top = 480.0
+margin_right = 708.0
+margin_bottom = 494.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "3"
+
+[node name="Label5" type="Label" parent="Grid/CollapseOrder/3"]
+margin_left = 668.0
+margin_top = 539.0
+margin_right = 708.0
+margin_bottom = 553.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "3"
+
+[node name="Label6" type="Label" parent="Grid/CollapseOrder/3"]
+margin_left = 732.0
+margin_top = 288.0
+margin_right = 772.0
+margin_bottom = 302.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "3"
+
+[node name="Label7" type="Label" parent="Grid/CollapseOrder/3"]
+margin_left = 732.0
+margin_top = 353.0
+margin_right = 772.0
+margin_bottom = 367.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "3"
+
+[node name="Label8" type="Label" parent="Grid/CollapseOrder/3"]
+margin_left = 732.0
+margin_top = 415.0
+margin_right = 772.0
+margin_bottom = 429.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "3"
+
+[node name="Label9" type="Label" parent="Grid/CollapseOrder/3"]
+margin_left = 732.0
+margin_top = 480.0
+margin_right = 772.0
+margin_bottom = 494.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "3"
+
+[node name="Label10" type="Label" parent="Grid/CollapseOrder/3"]
+margin_left = 732.0
+margin_top = 539.0
+margin_right = 772.0
+margin_bottom = 553.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "3"
+
+[node name="Label11" type="Label" parent="Grid/CollapseOrder/3"]
+margin_left = 671.0
+margin_top = 219.0
+margin_right = 711.0
+margin_bottom = 233.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "3"
+
+[node name="Label12" type="Label" parent="Grid/CollapseOrder/3"]
+margin_left = 732.0
+margin_top = 218.0
+margin_right = 772.0
+margin_bottom = 232.0
 custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
 text = "3"
 

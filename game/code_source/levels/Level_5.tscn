@@ -70,6 +70,10 @@ lifetime = 140.0
 preprocess = 280.0
 process_material = SubResource( 2 )
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 639, 352 )
+current = true
+
 [node name="Grid" type="TileMap" parent="."]
 tile_set = ExtResource( 12 )
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
@@ -193,6 +197,21 @@ value = 5
 [node name="ATT_2" parent="Grid" instance=ExtResource( 9 )]
 position = Vector2( 930, 417 )
 upgrade_type = 2
+value = 5
+
+[node name="DEF_5b" parent="Grid" instance=ExtResource( 9 )]
+position = Vector2( 669, 221 )
+upgrade_type = 3
+value = 5
+
+[node name="DEF_5a" parent="Grid" instance=ExtResource( 9 )]
+position = Vector2( 928, 287 )
+upgrade_type = 3
+value = 5
+
+[node name="HP_10a" parent="Grid" instance=ExtResource( 9 )]
+position = Vector2( 159, 345 )
+upgrade_type = 0
 value = 10
 
 [node name="HP_6" parent="Grid" instance=ExtResource( 9 )]
@@ -209,6 +228,19 @@ value = 10
 position = Vector2( 354, 345 )
 upgrade_type = 3
 value = 10
+
+[node name="HP_10_g" parent="Grid" instance=ExtResource( 9 )]
+position = Vector2( 995, 535 )
+upgrade_type = 0
+value = 10
+
+[node name="Stair" type="Node2D" parent="Grid"]
+position = Vector2( 1059, 406 )
+script = ExtResource( 7 )
+type = 4
+
+[node name="Sprite" type="Sprite" parent="Grid/Stair"]
+texture = ExtResource( 17 )
 
 [node name="Fences" type="YSort" parent="Grid"]
 
@@ -288,11 +320,43 @@ margin_bottom = 483.0
 custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
 text = "1"
 
+[node name="Label4" type="Label" parent="Grid/CollapseOrder/1"]
+margin_left = 156.0
+margin_top = 474.0
+margin_right = 196.0
+margin_bottom = 488.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "1"
+
 [node name="Label5" type="Label" parent="Grid/CollapseOrder/1"]
 margin_left = 349.0
 margin_top = 539.0
 margin_right = 389.0
 margin_bottom = 553.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "1"
+
+[node name="Label6" type="Label" parent="Grid/CollapseOrder/1"]
+margin_left = 219.0
+margin_top = 280.0
+margin_right = 259.0
+margin_bottom = 294.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "1"
+
+[node name="Label7" type="Label" parent="Grid/CollapseOrder/1"]
+margin_left = 219.0
+margin_top = 347.0
+margin_right = 259.0
+margin_bottom = 361.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "1"
+
+[node name="Label8" type="Label" parent="Grid/CollapseOrder/1"]
+margin_left = 220.0
+margin_top = 410.0
+margin_right = 260.0
+margin_bottom = 424.0
 custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
 text = "1"
 
@@ -305,6 +369,14 @@ margin_left = 603.0
 margin_top = 469.0
 margin_right = 643.0
 margin_bottom = 483.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "1"
+
+[node name="Label10" type="Label" parent="Grid/CollapseOrder/1"]
+margin_left = 221.0
+margin_top = 536.0
+margin_right = 261.0
+margin_bottom = 550.0
 custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
 text = "1"
 
@@ -337,6 +409,14 @@ margin_left = 413.0
 margin_top = 407.0
 margin_right = 453.0
 margin_bottom = 421.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "1"
+
+[node name="Label15" type="Label" parent="Grid/CollapseOrder/1"]
+margin_left = 283.0
+margin_top = 536.0
+margin_right = 323.0
+margin_bottom = 550.0
 custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
 text = "1"
 
@@ -377,6 +457,38 @@ margin_left = 542.0
 margin_top = 536.0
 margin_right = 582.0
 margin_bottom = 550.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "1"
+
+[node name="Label21" type="Label" parent="Grid/CollapseOrder/1"]
+margin_left = 414.0
+margin_top = 284.0
+margin_right = 454.0
+margin_bottom = 298.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "1"
+
+[node name="Label22" type="Label" parent="Grid/CollapseOrder/1"]
+margin_left = 415.0
+margin_top = 348.0
+margin_right = 455.0
+margin_bottom = 362.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "1"
+
+[node name="Label23" type="Label" parent="Grid/CollapseOrder/1"]
+margin_left = 412.0
+margin_top = 411.0
+margin_right = 452.0
+margin_bottom = 425.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "1"
+
+[node name="Label24" type="Label" parent="Grid/CollapseOrder/1"]
+margin_left = 414.0
+margin_top = 475.0
+margin_right = 454.0
+margin_bottom = 489.0
 custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
 text = "1"
 
@@ -562,7 +674,127 @@ margin_bottom = 423.0
 custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
 text = "4"
 
+[node name="Label14" type="Label" parent="Grid/CollapseOrder/4"]
+margin_left = 925.0
+margin_top = 473.0
+margin_right = 965.0
+margin_bottom = 487.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "4"
+
+[node name="Label15" type="Label" parent="Grid/CollapseOrder/4"]
+margin_left = 925.0
+margin_top = 539.0
+margin_right = 965.0
+margin_bottom = 553.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "4"
+
 [node name="5" type="Node2D" parent="Grid/CollapseOrder"]
+
+[node name="Label" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 986.0
+margin_top = 282.0
+margin_right = 1026.0
+margin_bottom = 296.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+[node name="Label2" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 990.0
+margin_top = 344.0
+margin_right = 1030.0
+margin_bottom = 358.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+[node name="Label3" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 990.0
+margin_top = 409.0
+margin_right = 1030.0
+margin_bottom = 423.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+[node name="Label4" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 989.0
+margin_top = 473.0
+margin_right = 1029.0
+margin_bottom = 487.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+[node name="Label5" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 987.0
+margin_top = 538.0
+margin_right = 1027.0
+margin_bottom = 552.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+[node name="Label6" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 1052.0
+margin_top = 282.0
+margin_right = 1092.0
+margin_bottom = 296.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+[node name="Label8" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 1055.0
+margin_top = 412.0
+margin_right = 1095.0
+margin_bottom = 426.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+[node name="Label10" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 1054.0
+margin_top = 539.0
+margin_right = 1094.0
+margin_bottom = 553.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+[node name="Label11" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 1115.0
+margin_top = 282.0
+margin_right = 1155.0
+margin_bottom = 296.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+[node name="Label12" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 1119.0
+margin_top = 346.0
+margin_right = 1159.0
+margin_bottom = 360.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+[node name="Label13" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 1120.0
+margin_top = 412.0
+margin_right = 1160.0
+margin_bottom = 426.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+[node name="Label14" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 1120.0
+margin_top = 472.0
+margin_right = 1160.0
+margin_bottom = 486.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+[node name="Label15" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 1115.0
+margin_top = 536.0
+margin_right = 1155.0
+margin_bottom = 550.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
 
 [node name="UI" parent="." instance=ExtResource( 8 )]
 
