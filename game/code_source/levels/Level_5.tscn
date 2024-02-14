@@ -96,6 +96,125 @@ type = 4
 
 [node name="Sprite" type="Sprite" parent="Grid/Stair"]
 position = Vector2( -5, -2 )
+
+[node name="Sprite" type="Sprite" parent="Grid/Fences"]
+position = Vector2( 436, 193 )
+texture = ExtResource( 15 )
+
+[node name="Sprite2" type="Sprite" parent="Grid/Fences"]
+position = Vector2( 217, 190 )
+texture = ExtResource( 15 )
+
+[node name="Sprite3" type="Sprite" parent="Grid/Fences"]
+position = Vector2( 290, 192 )
+texture = ExtResource( 15 )
+
+[node name="Sprite4" type="Sprite" parent="Grid/Fences"]
+position = Vector2( 361, 194 )
+=========
+position = Vector2( -5, -2 )
+
+[node name="Sprite" type="Sprite" parent="Grid/Fences"]
+position = Vector2( 436, 193 )
+texture = ExtResource( 15 )
+
+[node name="Sprite2" type="Sprite" parent="Grid/Fences"]
+position = Vector2( 217, 190 )
+texture = ExtResource( 15 )
+
+[node name="Sprite3" type="Sprite" parent="Grid/Fences"]
+position = Vector2( 290, 192 )
+texture = ExtResource( 15 )
+
+[node name="Sprite4" type="Sprite" parent="Grid/Fences"]
+position = Vector2( 361, 194 )
+=========
+position = Vector2( -5, -2 )
+
+[node name="Sprite" type="Sprite" parent="Grid/Fences"]
+position = Vector2( 436, 193 )
+texture = ExtResource( 15 )
+
+[node name="Sprite2" type="Sprite" parent="Grid/Fences"]
+position = Vector2( 217, 190 )
+texture = ExtResource( 15 )
+
+[node name="Sprite3" type="Sprite" parent="Grid/Fences"]
+position = Vector2( 290, 192 )
+texture = ExtResource( 15 )
+
+[node name="Sprite4" type="Sprite" parent="Grid/Fences"]
+position = Vector2( 361, 194 )
+=========
+position = Vector2( -5, -2 )
+
+[node name="Sprite" type="Sprite" parent="Grid/Fences"]
+position = Vector2( 436, 193 )
+texture = ExtResource( 15 )
+
+[node name="Sprite2" type="Sprite" parent="Grid/Fences"]
+position = Vector2( 217, 190 )
+texture = ExtResource( 15 )
+
+[node name="Sprite3" type="Sprite" parent="Grid/Fences"]
+position = Vector2( 290, 192 )
+texture = ExtResource( 15 )
+
+[node name="Sprite4" type="Sprite" parent="Grid/Fences"]
+position = Vector2( 361, 194 )
+=========
+position = Vector2( -5, -2 )
+
+[node name="Sprite" type="Sprite" parent="Grid/Fences"]
+position = Vector2( 436, 193 )
+texture = ExtResource( 15 )
+
+[node name="Sprite2" type="Sprite" parent="Grid/Fences"]
+position = Vector2( 217, 190 )
+texture = ExtResource( 15 )
+
+[node name="Sprite3" type="Sprite" parent="Grid/Fences"]
+position = Vector2( 290, 192 )
+texture = ExtResource( 15 )
+
+[node name="Sprite4" type="Sprite" parent="Grid/Fences"]
+position = Vector2( 361, 194 )
+=========
+position = Vector2( -5, -2 )
+
+[node name="Sprite" type="Sprite" parent="Grid/Fences"]
+position = Vector2( 436, 193 )
+texture = ExtResource( 15 )
+
+[node name="Sprite2" type="Sprite" parent="Grid/Fences"]
+position = Vector2( 217, 190 )
+texture = ExtResource( 15 )
+
+[node name="Sprite3" type="Sprite" parent="Grid/Fences"]
+position = Vector2( 290, 192 )
+texture = ExtResource( 15 )
+
+[node name="Sprite4" type="Sprite" parent="Grid/Fences"]
+position = Vector2( 361, 194 )
+=========
+position = Vector2( -5, -2 )
+
+[node name="Sprite" type="Sprite" parent="Grid/Fences"]
+position = Vector2( 436, 193 )
+texture = ExtResource( 15 )
+
+[node name="Sprite2" type="Sprite" parent="Grid/Fences"]
+position = Vector2( 217, 190 )
+texture = ExtResource( 15 )
+
+[node name="Sprite3" type="Sprite" parent="Grid/Fences"]
+position = Vector2( 290, 192 )
+texture = ExtResource( 15 )
+
+[node name="Sprite4" type="Sprite" parent="Grid/Fences"]
+position = Vector2( 361, 194 )
+=========
+position = Vector2( -5, -2 )
 texture = ExtResource( 17 )
 
 [node name="Actor" parent="Grid" instance=ExtResource( 2 )]
@@ -180,7 +299,7 @@ upgrade_type = 3
 value = 5
 
 [node name="DEF_8" parent="Grid" instance=ExtResource( 9 )]
-position = Vector2( 994, 224 )
+value = 5
 upgrade_type = 3
 value = 5
 
@@ -193,26 +312,18 @@ value = 5
 position = Vector2( 803, 286 )
 upgrade_type = 2
 value = 5
-
-[node name="ATT_2" parent="Grid" instance=ExtResource( 9 )]
-position = Vector2( 930, 417 )
-upgrade_type = 2
-value = 5
-
-[node name="HP_6" parent="Grid" instance=ExtResource( 9 )]
-position = Vector2( 738, 345 )
-upgrade_type = 0
-value = 10
-
-[node name="HP_7" parent="Grid" instance=ExtResource( 9 )]
-position = Vector2( 929, 282 )
-upgrade_type = 0
-value = 10
-
-[node name="DEF_7" parent="Grid" instance=ExtResource( 9 )]
-position = Vector2( 354, 345 )
 upgrade_type = 3
 value = 10
+
+[node name="HP_10_g" parent="Grid" instance=ExtResource( 9 )]
+position = Vector2( 995, 535 )
+upgrade_type = 0
+value = 10
+
+[node name="Stair" type="Node2D" parent="Grid"]
+position = Vector2( 1059, 406 )
+script = ExtResource( 7 )
+type = 4
 
 [node name="Fences" type="YSort" parent="Grid"]
 
@@ -247,23 +358,6 @@ texture = ExtResource( 15 )
 [node name="Sprite8" type="Sprite" parent="Grid/Fences"]
 position = Vector2( -137, 159 )
 texture = ExtResource( 15 )
-
-[node name="Sprite9" type="Sprite" parent="Grid/Fences"]
-position = Vector2( -142, 257 )
-texture = ExtResource( 15 )
-
-[node name="Sprite10" type="Sprite" parent="Grid/Fences"]
-position = Vector2( -147, 375 )
-texture = ExtResource( 15 )
-
-[node name="Sprite11" type="Sprite" parent="Grid/Fences"]
-position = Vector2( -161, 425 )
-texture = ExtResource( 15 )
-
-[node name="CollapseOrder" type="Node2D" parent="Grid"]
-
-[node name="1" type="Node2D" parent="Grid/CollapseOrder"]
-
 [node name="Label8" type="Label" parent="Grid/CollapseOrder/1"]
 anchor_left = -1.756
 anchor_top = -51.888
@@ -273,10 +367,10 @@ margin_left = 349.0
 margin_top = 470.0
 margin_right = 389.0
 margin_bottom = 484.0
-custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
-text = "1"
 
-[node name="Label7" type="Label" parent="Grid/CollapseOrder/1"]
+[node name="Label5" type="Label" parent="Grid/CollapseOrder/1"]
+margin_left = 156.0
+margin_top = 539.0
 margin_left = 410.0
 margin_top = 473.0
 margin_right = 450.0
@@ -301,57 +395,65 @@ custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
 text = "1"
 
 [node name="Label9" type="Label" parent="Grid/CollapseOrder/1"]
-anchor_left = -1.756
-anchor_top = -51.888
-anchor_right = -1.756
-anchor_bottom = -51.888
-margin_left = 603.0
-margin_top = 469.0
-margin_right = 643.0
-margin_bottom = 483.0
+[node name="Label7" type="Label" parent="Grid/CollapseOrder/1"]
+<<<<<<<<< Temporary merge branch 1
+margin_left = 219.0
+margin_top = 347.0
+margin_right = 259.0
+margin_bottom = 361.0
 custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
 text = "1"
 
-[node name="Label11" type="Label" parent="Grid/CollapseOrder/1"]
-margin_left = 409.0
-margin_top = 344.0
-margin_right = 449.0
-margin_bottom = 358.0
-custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
-text = "1"
-
-[node name="Label12" type="Label" parent="Grid/CollapseOrder/1"]
-margin_left = 353.0
-margin_top = 345.0
-margin_right = 393.0
-margin_bottom = 359.0
-custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
-text = "1"
-
-[node name="Label13" type="Label" parent="Grid/CollapseOrder/1"]
-margin_left = 348.0
+[node name="Label8" type="Label" parent="Grid/CollapseOrder/1"]
+margin_left = 220.0
 margin_top = 410.0
-margin_right = 388.0
+margin_right = 260.0
 margin_bottom = 424.0
 custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
 text = "1"
 
-[node name="Label14" type="Label" parent="Grid/CollapseOrder/1"]
+[node name="Label9" type="Label" parent="Grid/CollapseOrder/1"]
+margin_left = 221.0
+margin_top = 473.0
+margin_right = 261.0
+=========
+margin_left = 410.0
+margin_top = 473.0
+margin_right = 450.0
+>>>>>>>>> Temporary merge branch 2
+margin_bottom = 487.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "1"
+
+<<<<<<<<< Temporary merge branch 1
+[node name="Label10" type="Label" parent="Grid/CollapseOrder/1"]
+margin_left = 221.0
+margin_top = 536.0
+margin_right = 261.0
+margin_bottom = 550.0
+=========
+[node name="Label6" type="Label" parent="Grid/CollapseOrder/1"]
+margin_left = 475.0
+margin_top = 469.0
+margin_right = 515.0
+margin_bottom = 483.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "1"
 margin_left = 413.0
 margin_top = 407.0
 margin_right = 453.0
 margin_bottom = 421.0
-custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
-text = "1"
-
-[node name="Label16" type="Label" parent="Grid/CollapseOrder/1"]
+anchor_right = -1.756
+anchor_bottom = -51.888
+margin_left = 603.0
+margin_top = 469.0
 margin_left = 475.0
 margin_top = 407.0
 margin_right = 515.0
 margin_bottom = 421.0
-custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
-text = "1"
 
+[node name="Label14" type="Label" parent="Grid/CollapseOrder/1"]
+<<<<<<<<< Temporary merge branch 1
 [node name="Label66" type="Label" parent="Grid/CollapseOrder/1"]
 margin_left = 541.0
 margin_top = 407.0
@@ -381,6 +483,67 @@ margin_left = 542.0
 margin_top = 536.0
 margin_right = 582.0
 margin_bottom = 550.0
+
+[node name="Label17" type="Label" parent="Grid/CollapseOrder/1"]
+margin_left = 350.0
+margin_top = 348.0
+margin_right = 390.0
+margin_bottom = 362.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "1"
+
+[node name="Label18" type="Label" parent="Grid/CollapseOrder/1"]
+margin_left = 351.0
+margin_top = 411.0
+margin_right = 391.0
+margin_bottom = 425.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "1"
+
+[node name="Label19" type="Label" parent="Grid/CollapseOrder/1"]
+margin_left = 351.0
+margin_top = 476.0
+margin_right = 391.0
+margin_bottom = 490.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "1"
+
+[node name="Label20" type="Label" parent="Grid/CollapseOrder/1"]
+margin_left = 349.0
+margin_top = 536.0
+margin_right = 389.0
+margin_bottom = 550.0
+=========
+margin_left = 475.0
+margin_top = 407.0
+margin_right = 515.0
+margin_bottom = 421.0
+>>>>>>>>> Temporary merge branch 2
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "1"
+
+[node name="Label21" type="Label" parent="Grid/CollapseOrder/1"]
+<<<<<<<<< Temporary merge branch 1
+margin_left = 414.0
+margin_top = 284.0
+margin_right = 454.0
+margin_bottom = 298.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "1"
+
+[node name="Label22" type="Label" parent="Grid/CollapseOrder/1"]
+margin_left = 415.0
+margin_top = 348.0
+margin_right = 455.0
+margin_bottom = 362.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "1"
+
+[node name="Label23" type="Label" parent="Grid/CollapseOrder/1"]
+margin_left = 412.0
+margin_top = 411.0
+margin_right = 452.0
+margin_bottom = 425.0
 custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
 text = "1"
 
@@ -389,191 +552,245 @@ margin_left = 414.0
 margin_top = 475.0
 margin_right = 454.0
 margin_bottom = 489.0
+=========
+margin_left = 541.0
+margin_top = 407.0
+margin_right = 581.0
+margin_bottom = 421.0
 custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
 text = "1"
 
-[node name="Label25" type="Label" parent="Grid/CollapseOrder/1"]
-margin_left = 543.0
-margin_top = 471.0
-margin_right = 583.0
-margin_bottom = 485.0
+[node name="Label10" type="Label" parent="Grid/CollapseOrder/1"]
+margin_left = 414.0
+margin_top = 536.0
+margin_right = 454.0
+margin_bottom = 550.0
 custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
 text = "1"
 
-[node name="2" type="Node2D" parent="Grid/CollapseOrder"]
-
-[node name="Label6" type="Label" parent="Grid/CollapseOrder/2"]
-margin_left = 544.0
-margin_top = 347.0
-margin_right = 584.0
-margin_bottom = 361.0
+[node name="Label15" type="Label" parent="Grid/CollapseOrder/1"]
+margin_left = 476.0
+margin_top = 536.0
+margin_right = 517.0
+margin_bottom = 550.0
 custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
-text = "2"
-
-[node name="Label5" type="Label" parent="Grid/CollapseOrder/2"]
-margin_left = 606.0
-margin_top = 348.0
-margin_right = 646.0
-margin_bottom = 362.0
+margin_top = 282.0
+margin_right = 1026.0
+margin_bottom = 296.0
 custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
-text = "2"
+text = "5"
 
-[node name="Label10" type="Label" parent="Grid/CollapseOrder/2"]
-margin_left = 609.0
-margin_top = 411.0
-margin_right = 649.0
-margin_bottom = 425.0
+[node name="Label2" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 990.0
+margin_top = 344.0
+margin_right = 1030.0
+margin_bottom = 358.0
 custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
-text = "2"
+text = "5"
 
-[node name="Label15" type="Label" parent="Grid/CollapseOrder/2"]
-margin_left = 482.0
-margin_top = 349.0
-margin_right = 522.0
-margin_bottom = 363.0
-custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
-text = "2"
-
-[node name="Label3" type="Label" parent="Grid/CollapseOrder/2"]
-margin_left = 675.0
-margin_top = 415.0
-margin_right = 715.0
-margin_bottom = 429.0
-custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
-text = "2"
-
-[node name="Label8" type="Label" parent="Grid/CollapseOrder/2"]
-margin_left = 737.0
-margin_top = 415.0
-margin_right = 777.0
-margin_bottom = 429.0
-custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
-text = "2"
-
-[node name="Label4" type="Label" parent="Grid/CollapseOrder/2"]
-margin_left = 675.0
-margin_top = 346.0
-margin_right = 715.0
-margin_bottom = 360.0
-custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
-text = "2"
-
-[node name="Label9" type="Label" parent="Grid/CollapseOrder/2"]
-margin_left = 737.0
-margin_top = 346.0
-margin_right = 777.0
-margin_bottom = 360.0
-custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
-text = "2"
-
-[node name="3" type="Node2D" parent="Grid/CollapseOrder"]
-
-[node name="Label5" type="Label" parent="Grid/CollapseOrder/3"]
-margin_left = 790.0
-margin_top = 350.0
-margin_right = 830.0
-margin_bottom = 364.0
-custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
-text = "3"
-
-[node name="Label12" type="Label" parent="Grid/CollapseOrder/3"]
-margin_left = 857.0
-margin_top = 284.0
-margin_right = 897.0
-margin_bottom = 298.0
-custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
-text = "3"
-
-[node name="Label8" type="Label" parent="Grid/CollapseOrder/3"]
-margin_left = 856.0
-margin_top = 216.0
-margin_right = 896.0
-margin_bottom = 230.0
-custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
-text = "3"
-
-[node name="Label6" type="Label" parent="Grid/CollapseOrder/3"]
-margin_left = 788.0
-margin_top = 288.0
-margin_right = 828.0
-margin_bottom = 302.0
-custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
-text = "3"
-
-[node name="Label7" type="Label" parent="Grid/CollapseOrder/3"]
-margin_left = 861.0
-margin_top = 414.0
-margin_right = 901.0
-margin_bottom = 428.0
-custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
-text = "3"
-
-[node name="Label11" type="Label" parent="Grid/CollapseOrder/3"]
-margin_left = 861.0
-margin_top = 346.0
-margin_right = 901.0
-margin_bottom = 360.0
-custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
-text = "3"
-
-[node name="Label9" type="Label" parent="Grid/CollapseOrder/3"]
-margin_left = 792.0
+[node name="Label3" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 990.0
 margin_top = 409.0
-margin_right = 832.0
+margin_right = 1030.0
 margin_bottom = 423.0
 custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
-text = "3"
+text = "5"
 
-[node name="4" type="Node2D" parent="Grid/CollapseOrder"]
-
-[node name="Label" type="Label" parent="Grid/CollapseOrder/4"]
-margin_left = 979.0
-margin_top = 345.0
-margin_right = 1019.0
-margin_bottom = 359.0
+[node name="Label4" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 989.0
+margin_top = 473.0
+margin_right = 1029.0
+margin_bottom = 487.0
 custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
-text = "4"
+text = "5"
 
-[node name="Label4" type="Label" parent="Grid/CollapseOrder/4"]
-margin_left = 918.0
-margin_top = 410.0
-margin_right = 958.0
-margin_bottom = 424.0
-custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
-text = "4"
-
-[node name="Label2" type="Label" parent="Grid/CollapseOrder/4"]
-margin_left = 920.0
-margin_top = 280.0
-margin_right = 955.0
-margin_bottom = 294.0
-custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
-text = "4"
-
-[node name="Label6" type="Label" parent="Grid/CollapseOrder/4"]
+[node name="Label5" type="Label" parent="Grid/CollapseOrder/5"]
 margin_left = 987.0
-margin_top = 219.0
+margin_top = 538.0
 margin_right = 1027.0
-margin_bottom = 233.0
+margin_bottom = 552.0
 custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
-text = "4"
+text = "5"
 
-[node name="Label7" type="Label" parent="Grid/CollapseOrder/4"]
-margin_left = 918.0
-margin_top = 348.0
-margin_right = 958.0
-margin_bottom = 362.0
+[node name="Label6" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 1052.0
+margin_top = 282.0
+margin_right = 1092.0
+margin_bottom = 296.0
 custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
-text = "4"
+text = "5"
 
-[node name="Label3" type="Label" parent="Grid/CollapseOrder/4"]
-margin_left = 977.0
+[node name="Label8" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 1055.0
+margin_top = 412.0
+margin_right = 1095.0
+margin_bottom = 426.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+[node name="Label10" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 1054.0
+margin_top = 539.0
+margin_right = 1094.0
+margin_bottom = 553.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+[node name="Label11" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 1115.0
+margin_top = 282.0
+margin_right = 1155.0
+margin_bottom = 296.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+[node name="Label12" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 1119.0
+margin_top = 346.0
+margin_right = 1159.0
+margin_bottom = 360.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+[node name="Label13" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 1120.0
+margin_top = 412.0
+margin_right = 1160.0
+margin_bottom = 426.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+[node name="Label14" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 1120.0
+margin_top = 472.0
+margin_right = 1160.0
+margin_bottom = 486.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+[node name="Label15" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 1115.0
+margin_top = 536.0
+margin_right = 1155.0
+margin_bottom = 550.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+=========
+[node name="5" type="Node2D" parent="Grid/CollapseOrder"]
+
+>>>>>>>>> Temporary merge branch 2
+=========
+[node name="5" type="Node2D" parent="Grid/CollapseOrder"]
+
+>>>>>>>>> Temporary merge branch 2
+=========
+[node name="5" type="Node2D" parent="Grid/CollapseOrder"]
+
+>>>>>>>>> Temporary merge branch 2
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+[node name="Label2" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 990.0
+margin_top = 344.0
+margin_right = 1030.0
+margin_bottom = 358.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+[node name="Label3" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 990.0
 margin_top = 409.0
-margin_right = 1017.0
+margin_right = 1030.0
 margin_bottom = 423.0
 custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
-text = "4"
+text = "5"
 
+[node name="Label4" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 989.0
+margin_top = 473.0
+margin_right = 1029.0
+margin_bottom = 487.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+[node name="Label5" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 987.0
+margin_top = 538.0
+margin_right = 1027.0
+margin_bottom = 552.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+[node name="Label6" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 1052.0
+margin_top = 282.0
+margin_right = 1092.0
+margin_bottom = 296.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+[node name="Label8" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 1055.0
+margin_top = 412.0
+margin_right = 1095.0
+margin_bottom = 426.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+[node name="Label10" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 1054.0
+margin_top = 539.0
+margin_right = 1094.0
+margin_bottom = 553.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+[node name="Label11" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 1115.0
+margin_top = 282.0
+margin_right = 1155.0
+margin_bottom = 296.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+[node name="Label12" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 1119.0
+margin_top = 346.0
+margin_right = 1159.0
+margin_bottom = 360.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+[node name="Label13" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 1120.0
+margin_top = 412.0
+margin_right = 1160.0
+margin_bottom = 426.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+[node name="Label14" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 1120.0
+margin_top = 472.0
+margin_right = 1160.0
+margin_bottom = 486.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+[node name="Label15" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 1115.0
+margin_top = 536.0
+margin_right = 1155.0
+margin_bottom = 550.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+=========
+[node name="5" type="Node2D" parent="Grid/CollapseOrder"]
+
+>>>>>>>>> Temporary merge branch 2
 [node name="UI" parent="." instance=ExtResource( 8 )]
 
 [node name="AudioHit" type="AudioStreamPlayer2D" parent="."]

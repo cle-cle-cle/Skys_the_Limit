@@ -1135,6 +1135,212 @@ margin_bottom = 555.0
 custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
 text = "4"
 
+
+[node name="Label2" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 990.0
+margin_top = 344.0
+margin_right = 1030.0
+margin_bottom = 358.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+[node name="Label3" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 990.0
+margin_top = 409.0
+margin_right = 1030.0
+margin_bottom = 423.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+[node name="Label4" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 989.0
+margin_top = 473.0
+margin_right = 1029.0
+margin_bottom = 487.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+[node name="Label5" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 987.0
+margin_top = 538.0
+margin_right = 1027.0
+margin_bottom = 552.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+[node name="Label6" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 1052.0
+margin_top = 282.0
+margin_right = 1092.0
+margin_bottom = 296.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+[node name="Label8" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 1055.0
+margin_top = 412.0
+margin_right = 1095.0
+margin_bottom = 426.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+[node name="Label10" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 1054.0
+margin_top = 539.0
+margin_right = 1094.0
+margin_bottom = 553.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+[node name="Label11" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 1115.0
+margin_top = 282.0
+margin_right = 1155.0
+margin_bottom = 296.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+[node name="Label12" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 1119.0
+margin_top = 346.0
+margin_right = 1159.0
+margin_bottom = 360.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+[node name="Label13" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 1120.0
+margin_top = 412.0
+margin_right = 1160.0
+margin_bottom = 426.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+[node name="Label14" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 1120.0
+margin_top = 472.0
+margin_right = 1160.0
+margin_bottom = 486.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+[node name="Label15" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 1115.0
+margin_top = 536.0
+margin_right = 1155.0
+margin_bottom = 550.0
+=========
+margin_left = 1412.0
+margin_top = 405.0
+margin_right = 1452.0
+margin_bottom = 419.0
+>>>>>>>>> Temporary merge branch 2
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+
+[node name="Label2" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 990.0
+margin_top = 344.0
+margin_right = 1030.0
+margin_bottom = 358.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+[node name="Label3" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 990.0
+margin_top = 409.0
+margin_right = 1030.0
+margin_bottom = 423.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+[node name="Label4" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 989.0
+margin_top = 473.0
+margin_right = 1029.0
+margin_bottom = 487.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+[node name="Label5" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 987.0
+margin_top = 538.0
+margin_right = 1027.0
+margin_bottom = 552.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+[node name="Label6" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 1052.0
+margin_top = 282.0
+margin_right = 1092.0
+margin_bottom = 296.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+[node name="Label8" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 1055.0
+margin_top = 412.0
+margin_right = 1095.0
+margin_bottom = 426.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+[node name="Label10" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 1054.0
+margin_top = 539.0
+margin_right = 1094.0
+margin_bottom = 553.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+[node name="Label11" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 1115.0
+margin_top = 282.0
+margin_right = 1155.0
+margin_bottom = 296.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+[node name="Label12" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 1119.0
+margin_top = 346.0
+margin_right = 1159.0
+margin_bottom = 360.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+[node name="Label13" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 1120.0
+margin_top = 412.0
+margin_right = 1160.0
+margin_bottom = 426.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+[node name="Label14" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 1120.0
+margin_top = 472.0
+margin_right = 1160.0
+margin_bottom = 486.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
+[node name="Label15" type="Label" parent="Grid/CollapseOrder/5"]
+margin_left = 1115.0
+margin_top = 536.0
+margin_right = 1155.0
+margin_bottom = 550.0
+=========
+margin_left = 1412.0
+margin_top = 405.0
+margin_right = 1452.0
+margin_bottom = 419.0
+>>>>>>>>> Temporary merge branch 2
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "5"
+
 [node name="UI" parent="." instance=ExtResource( 8 )]
 
 [node name="AudioHit" type="AudioStreamPlayer2D" parent="."]

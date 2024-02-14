@@ -1,4 +1,8 @@
 [gd_scene load_steps=18 format=2]
+[gd_scene load_steps=20 format=2]
+=========
+[gd_scene load_steps=18 format=2]
+>>>>>>>>> Temporary merge branch 2
 
 [ext_resource path="res://game/sounds/melody.wav" type="AudioStream" id=1]
 [ext_resource path="res://game/code_source/pawns/Actor.tscn" type="PackedScene" id=2]
@@ -10,10 +14,15 @@
 [ext_resource path="res://game/code_source/ui.tscn" type="PackedScene" id=8]
 [ext_resource path="res://game/code_source/pawns/upgrade.tscn" type="PackedScene" id=9]
 [ext_resource path="res://game/assets/UI/selector.png" type="Texture" id=10]
-[ext_resource path="res://game/code_source/pawns/enemy.tscn" type="PackedScene" id=11]
-[ext_resource path="res://game/assets/grid/grid_tileset.tres" type="TileSet" id=12]
-[ext_resource path="res://game/code_source/level.gd" type="Script" id=13]
-[ext_resource path="res://game/code_source/grid.gd" type="Script" id=14]
+<<<<<<<<< Temporary merge branch 1
+[ext_resource path="res://game/assets/fence_bottom.png" type="Texture" id=15]
+[ext_resource path="res://game/assets/fence_side.png" type="Texture" id=16]
+=========
+>>>>>>>>> Temporary merge branch 2
+[ext_resource path="res://game/assets/fence_bottom.png" type="Texture" id=15]
+[ext_resource path="res://game/assets/fence_side.png" type="Texture" id=16]
+=========
+>>>>>>>>> Temporary merge branch 2
 [ext_resource path="res://game/assets/stair.png" type="Texture" id=17]
 
 [sub_resource type="ParticlesMaterial" id=1]
@@ -86,15 +95,56 @@ visible = false
 modulate = Color( 0.478431, 0.478431, 0.478431, 0.439216 )
 position = Vector2( 608, 285 )
 texture = ExtResource( 10 )
+<<<<<<<<< Temporary merge branch 1
+[node name="GreenSlime" parent="Grid" instance=ExtResource( 11 )]
+position = Vector2( 292, 413 )
+type = 3
 
-[node name="Actor" parent="Grid" instance=ExtResource( 2 )]
-position = Vector2( 223, 414 )
+[node name="GreenSlime2" parent="Grid" instance=ExtResource( 11 )]
+position = Vector2( 355, 413 )
+type = 3
 
-[node name="PinkSlime" parent="Grid" instance=ExtResource( 11 )]
+[node name="GreenSlime3" parent="Grid" instance=ExtResource( 11 )]
+position = Vector2( 418, 350 )
+type = 3
+
+[node name="GreenSlime4" parent="Grid" instance=ExtResource( 11 )]
+position = Vector2( 609, 347 )
+type = 3
+
+[node name="BlueSlime" parent="Grid" instance=ExtResource( 11 )]
+position = Vector2( 738, 347 )
+type = 3
+
+[node name="BlueSlime2" parent="Grid" instance=ExtResource( 11 )]
+position = Vector2( 738, 477 )
+type = 3
+
+[node name="BlueSlime3" parent="Grid" instance=ExtResource( 11 )]
+position = Vector2( 545, 477 )
+type = 3
+
+[node name="BlueSlime4" parent="Grid" instance=ExtResource( 11 )]
+position = Vector2( 610, 541 )
+type = 3
+
+[node name="BlueSlime5" parent="Grid" instance=ExtResource( 11 )]
+position = Vector2( 865, 283 )
+type = 3
+
+[node name="BlueSlime6" parent="Grid" instance=ExtResource( 11 )]
+position = Vector2( 930, 347 )
+type = 3
+
+[node name="BlueSlime7" parent="Grid" instance=ExtResource( 11 )]
+position = Vector2( 930, 478 )
+type = 3
+
+[node name="BlueSlime7" parent="Grid" instance=ExtResource( 11 )]
 position = Vector2( 546, 345 )
 type = 3
 enemy_type = 7
-
+[node name="PinkSlime" parent="Grid" instance=ExtResource( 11 )]
 [node name="Bonus" parent="Grid" instance=ExtResource( 9 )]
 position = Vector2( 610, 351 )
 value = 100
@@ -103,44 +153,155 @@ value = 100
 position = Vector2( 606, 471 )
 upgrade_type = 0
 value = 30
+>>>>>>>>> Temporary merge branch 2
+
+upgrade_type = 0
+value = 30
+>>>>>>>>> Temporary merge branch 2
 
 [node name="Stair" type="Node2D" parent="Grid"]
 position = Vector2( 1059, 406 )
 script = ExtResource( 7 )
 type = 4
+<<<<<<<<< Temporary merge branch 1
+[node name="Fences" type="YSort" parent="Grid"]
 
-[node name="Sprite" type="Sprite" parent="Grid/Stair"]
-texture = ExtResource( 17 )
+[node name="Sprite" type="Sprite" parent="Grid/Fences"]
+position = Vector2( 436, 193 )
+texture = ExtResource( 15 )
 
-[node name="CollapseOrder" type="Node2D" parent="Grid"]
+[node name="Sprite2" type="Sprite" parent="Grid/Fences"]
+position = Vector2( 217, 190 )
+texture = ExtResource( 15 )
 
-[node name="1" type="Node2D" parent="Grid/CollapseOrder"]
+[node name="Sprite3" type="Sprite" parent="Grid/Fences"]
+position = Vector2( 290, 192 )
+texture = ExtResource( 15 )
 
+[node name="Sprite4" type="Sprite" parent="Grid/Fences"]
+position = Vector2( 361, 194 )
+texture = ExtResource( 15 )
+
+[node name="Sprite5" type="Sprite" parent="Grid/Fences"]
+position = Vector2( 1210, 352 )
+texture = ExtResource( 16 )
+
+[node name="Sprite6" type="Sprite" parent="Grid/Fences"]
+position = Vector2( 1209, 431 )
+texture = ExtResource( 16 )
+
+[node name="Sprite7" type="Sprite" parent="Grid/Fences"]
+position = Vector2( 142, 191 )
+texture = ExtResource( 15 )
+
+[node name="Sprite8" type="Sprite" parent="Grid/Fences"]
+position = Vector2( 142, 218 )
+texture = ExtResource( 15 )
+
+[node name="Sprite9" type="Sprite" parent="Grid/Fences"]
+position = Vector2( 214, 217 )
+texture = ExtResource( 15 )
+
+[node name="Sprite10" type="Sprite" parent="Grid/Fences"]
+position = Vector2( 290, 223 )
+texture = ExtResource( 15 )
+
+[node name="Sprite11" type="Sprite" parent="Grid/Fences"]
+position = Vector2( 364, 223 )
+texture = ExtResource( 15 )
+
+=========
+>>>>>>>>> Temporary merge branch 2
+texture = ExtResource( 15 )
+
+=========
+>>>>>>>>> Temporary merge branch 2
 [node name="Label11" type="Label" parent="Grid/CollapseOrder/1"]
+margin_top = 474.0
+margin_right = 196.0
+=========
+[node name="Label8" type="Label" parent="Grid/CollapseOrder/1"]
 margin_left = 213.0
 margin_top = 474.0
 margin_right = 253.0
-margin_bottom = 488.0
-custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
-text = "1"
-
 [node name="Label12" type="Label" parent="Grid/CollapseOrder/1"]
 margin_left = 215.0
 margin_top = 344.0
 margin_right = 255.0
 margin_bottom = 358.0
-custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
-text = "1"
-
+margin_left = 219.0
+margin_top = 347.0
+margin_right = 259.0
 [node name="Label10" type="Label" parent="Grid/CollapseOrder/1"]
 margin_left = 214.0
 margin_top = 415.0
 margin_right = 254.0
 margin_bottom = 429.0
+margin_top = 347.0
+margin_right = 251.0
+margin_bottom = 361.0
+>>>>>>>>> Temporary merge branch 2
 custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
-text = "1"
+<<<<<<<<< Temporary merge branch 1
+[node name="Label" type="Label" parent="Grid/CollapseOrder/2"]
+margin_left = 482.0
+margin_top = 285.0
+margin_right = 522.0
+margin_bottom = 299.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "2"
 
-[node name="2" type="Node2D" parent="Grid/CollapseOrder"]
+[node name="Label2" type="Label" parent="Grid/CollapseOrder/2"]
+margin_left = 482.0
+margin_top = 348.0
+margin_right = 522.0
+margin_bottom = 362.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "2"
+
+[node name="Label3" type="Label" parent="Grid/CollapseOrder/2"]
+margin_left = 482.0
+margin_top = 415.0
+margin_right = 522.0
+margin_bottom = 429.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "2"
+
+[node name="Label4" type="Label" parent="Grid/CollapseOrder/2"]
+margin_left = 482.0
+margin_top = 480.0
+margin_right = 522.0
+margin_bottom = 494.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "2"
+
+[node name="Label5" type="Label" parent="Grid/CollapseOrder/2"]
+margin_left = 482.0
+margin_top = 539.0
+margin_right = 522.0
+margin_bottom = 553.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "2"
+
+[node name="Label6" type="Label" parent="Grid/CollapseOrder/2"]
+margin_left = 544.0
+margin_top = 285.0
+margin_right = 584.0
+margin_bottom = 299.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "2"
+
+[node name="Label7" type="Label" parent="Grid/CollapseOrder/2"]
+margin_left = 544.0
+margin_top = 348.0
+margin_right = 584.0
+margin_bottom = 362.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "2"
+
+margin_bottom = 362.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "2"
 
 [node name="Label8" type="Label" parent="Grid/CollapseOrder/2"]
 margin_left = 276.0
@@ -156,9 +317,66 @@ margin_top = 350.0
 margin_right = 317.0
 margin_bottom = 364.0
 custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
-text = "2"
+<<<<<<<<< Temporary merge branch 1
+[node name="Label" type="Label" parent="Grid/CollapseOrder/3"]
+margin_left = 668.0
+margin_top = 285.0
+margin_right = 708.0
+margin_bottom = 299.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "3"
 
-[node name="3" type="Node2D" parent="Grid/CollapseOrder"]
+[node name="Label2" type="Label" parent="Grid/CollapseOrder/3"]
+margin_left = 668.0
+margin_top = 351.0
+margin_right = 708.0
+margin_bottom = 365.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "3"
+
+[node name="Label3" type="Label" parent="Grid/CollapseOrder/3"]
+margin_left = 668.0
+margin_top = 414.0
+margin_right = 708.0
+margin_bottom = 428.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "3"
+
+[node name="Label4" type="Label" parent="Grid/CollapseOrder/3"]
+margin_left = 668.0
+margin_top = 480.0
+margin_right = 708.0
+margin_bottom = 494.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "3"
+
+[node name="Label5" type="Label" parent="Grid/CollapseOrder/3"]
+margin_left = 668.0
+margin_top = 539.0
+margin_right = 708.0
+margin_bottom = 553.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "3"
+
+[node name="Label6" type="Label" parent="Grid/CollapseOrder/3"]
+margin_left = 732.0
+margin_top = 288.0
+margin_right = 772.0
+margin_bottom = 302.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "3"
+
+[node name="Label7" type="Label" parent="Grid/CollapseOrder/3"]
+margin_left = 732.0
+margin_top = 353.0
+margin_right = 772.0
+margin_bottom = 367.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "3"
+
+margin_bottom = 367.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "3"
 
 [node name="Label8" type="Label" parent="Grid/CollapseOrder/3"]
 margin_left = 344.0
