@@ -98,6 +98,9 @@ type = 4
 position = Vector2( -5, -2 )
 texture = ExtResource( 17 )
 
+[node name="Sprite" type="Sprite" parent="Grid/Stair"]
+texture = ExtResource( 17 )
+
 [node name="Actor" parent="Grid" instance=ExtResource( 2 )]
 position = Vector2( 545, 544 )
 
@@ -238,9 +241,6 @@ value = 10
 position = Vector2( 1059, 406 )
 script = ExtResource( 7 )
 type = 4
-
-[node name="Sprite" type="Sprite" parent="Grid/Stair"]
-texture = ExtResource( 17 )
 
 [node name="Fences" type="YSort" parent="Grid"]
 

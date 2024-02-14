@@ -184,42 +184,6 @@ type = 4
 position = Vector2( -2, -3 )
 texture = ExtResource( 14 )
 
-[node name="Sprite3" type="Sprite" parent="Grid/Fences"]
-position = Vector2( 290, 192 )
-texture = ExtResource( 15 )
-
-[node name="Sprite4" type="Sprite" parent="Grid/Fences"]
-position = Vector2( 361, 194 )
-texture = ExtResource( 15 )
-
-[node name="Sprite5" type="Sprite" parent="Grid/Fences"]
-position = Vector2( 1210, 352 )
-texture = ExtResource( 16 )
-
-[node name="Sprite6" type="Sprite" parent="Grid/Fences"]
-position = Vector2( 1209, 431 )
-texture = ExtResource( 16 )
-
-[node name="Sprite7" type="Sprite" parent="Grid/Fences"]
-position = Vector2( 142, 191 )
-texture = ExtResource( 15 )
-
-[node name="Sprite8" type="Sprite" parent="Grid/Fences"]
-position = Vector2( 142, 218 )
-texture = ExtResource( 15 )
-
-[node name="Sprite9" type="Sprite" parent="Grid/Fences"]
-position = Vector2( 214, 217 )
-texture = ExtResource( 15 )
-
-[node name="Sprite10" type="Sprite" parent="Grid/Fences"]
-position = Vector2( 290, 223 )
-texture = ExtResource( 15 )
-
-[node name="Sprite11" type="Sprite" parent="Grid/Fences"]
-position = Vector2( 364, 223 )
-texture = ExtResource( 15 )
-
 [node name="CollapseOrder" type="Node2D" parent="Grid"]
 
 [node name="1" type="Node2D" parent="Grid/CollapseOrder"]
@@ -479,6 +443,42 @@ margin_right = 762.0
 margin_bottom = 738.0
 custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
 text = "5"
+
+[node name="Grid@Fences@Sprite3" type="Sprite" parent="."]
+position = Vector2( 290, 192 )
+texture = ExtResource( 15 )
+
+[node name="Grid@Fences@Sprite4" type="Sprite" parent="."]
+position = Vector2( 361, 194 )
+texture = ExtResource( 15 )
+
+[node name="Grid@Fences@Sprite5" type="Sprite" parent="."]
+position = Vector2( 1210, 352 )
+texture = ExtResource( 15 )
+
+[node name="Grid@Fences@Sprite6" type="Sprite" parent="."]
+position = Vector2( 1209, 431 )
+texture = ExtResource( 15 )
+
+[node name="Grid@Fences@Sprite7" type="Sprite" parent="."]
+position = Vector2( 142, 191 )
+texture = ExtResource( 15 )
+
+[node name="Grid@Fences@Sprite8" type="Sprite" parent="."]
+position = Vector2( 142, 218 )
+texture = ExtResource( 15 )
+
+[node name="Grid@Fences@Sprite9" type="Sprite" parent="."]
+position = Vector2( 214, 217 )
+texture = ExtResource( 15 )
+
+[node name="Grid@Fences@Sprite10" type="Sprite" parent="."]
+position = Vector2( 290, 223 )
+texture = ExtResource( 15 )
+
+[node name="Grid@Fences@Sprite11" type="Sprite" parent="."]
+position = Vector2( 364, 223 )
+texture = ExtResource( 15 )
 
 [node name="UI" parent="." instance=ExtResource( 10 )]
 
