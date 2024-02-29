@@ -24,28 +24,38 @@ func _ready():
 
 func _process(_delta):
 	update_labels()
-
-
-func _unhandled_input(event):
+#
+#
+#func _unhandled_input(event):
 	# If player holds down move button, actor will slip
-	if is_input_in_cd :
-		return
 	
-	is_input_in_cd = true
-	input_cooldown.start()
+#	if is_input_in_cd :
+#		return
+#
+#	is_input_in_cd = true
+#	input_cooldown.start()
 	
 	# Player Movement
 	var movement_dir := Vector2.ZERO
 	
-	if event is InputEventKey:
-		if event.pressed and ( event.scancode == KEY_UP or event.scancode == KEY_W ):
-			movement_dir.y = -1
-		elif event.pressed and ( event.scancode == KEY_DOWN or event.scancode == KEY_S ):
-			movement_dir.y = 1
-		elif event.pressed and ( event.scancode == KEY_LEFT or event.scancode == KEY_A ):
-			movement_dir.x = -1
-		elif event.pressed and ( event.scancode == KEY_RIGHT or event.scancode == KEY_D ):
-			movement_dir.x = 1
+	if Input.is_action_pressed("game_up"):
+		movement_dir.y = -1
+	elif Input.is_action_pressed("game_down"):
+		movement_dir.y = 1
+	elif Input.is_action_pressed("game_left"):
+		movement_dir.x = -1
+	elif Input.is_action_pressed("game_right"):
+		movement_dir.x = 1
+	
+#	if event is InputEventKey:
+#		if event.pressed and ( event.scancode == KEY_UP or event.scancode == KEY_W ):
+#			movement_dir.y = -1
+#		elif event.pressed and ( event.scancode == KEY_DOWN or event.scancode == KEY_S ):
+#			movement_dir.y = 1
+#		elif event.pressed and ( event.scancode == KEY_LEFT or event.scancode == KEY_A ):
+#			movement_dir.x = -1
+#		elif event.pressed and ( event.scancode == KEY_RIGHT or event.scancode == KEY_D ):
+#			movement_dir.x = 1
 	
 	if not movement_dir:
 		return

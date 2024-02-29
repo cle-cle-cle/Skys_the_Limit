@@ -39,7 +39,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Sky's The Limit"
-run/main_scene="res://game/code_source/game.tscn"
+run/main_scene="res://game/code_source/levels/Level_0.tscn"
 boot_splash/bg_color=Color( 0.141176, 0.141176, 0.141176, 1 )
 config/icon="res://icon.png"
 config/windows_native_icon="res://icon.ico"
