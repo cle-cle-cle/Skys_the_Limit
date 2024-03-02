@@ -98,7 +98,7 @@ enemy_type = 14
 [node name="GreenSlime17" parent="Grid" instance=ExtResource( 11 )]
 position = Vector2( 674, 606 )
 type = 3
-enemy_type = 13
+enemy_type = 12
 
 [node name="GreenSlime18" parent="Grid" instance=ExtResource( 11 )]
 position = Vector2( 736, 477 )
@@ -253,7 +253,7 @@ value = 10
 [node name="HP_10_g4" parent="Grid" instance=ExtResource( 9 )]
 position = Vector2( 675, 472 )
 upgrade_type = 0
-value = 10
+value = 30
 
 [node name="HP_10_g6" parent="Grid" instance=ExtResource( 9 )]
 position = Vector2( 352, 538 )
@@ -307,7 +307,7 @@ value = 5
 [node name="HP_10_g5" parent="Grid" instance=ExtResource( 9 )]
 position = Vector2( 674, 345 )
 upgrade_type = 0
-value = 10
+value = 30
 
 [node name="Stair" type="Node2D" parent="Grid"]
 position = Vector2( 995, 280 )
