@@ -104,17 +104,14 @@ type = 3
 [node name="BlueSlime" parent="Grid" instance=ExtResource( 11 )]
 position = Vector2( 933, 548 )
 type = 3
-enemy_type = 1
 
 [node name="BlueSlime2" parent="Grid" instance=ExtResource( 11 )]
 position = Vector2( 930, 284 )
 type = 3
-enemy_type = 1
 
 [node name="BlueSlime3" parent="Grid" instance=ExtResource( 11 )]
 position = Vector2( 607, 284 )
 type = 3
-enemy_type = 1
 
 [node name="Actor" parent="Grid" instance=ExtResource( 2 )]
 position = Vector2( 290, 412 )

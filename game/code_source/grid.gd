@@ -97,6 +97,8 @@ func update_pawn_position(pawn, cell_start, cell_target):
 
 func collapse_ground(current_turn):
 	print(current_turn)
+	if collapse_order.get_child_count() == 0:
+		return
 	for cell in collapse_order.get_child(current_turn).get_children():
 		# check if there are other objects on this cell, remove them
 		# but don't remove actor, because it might be moving
