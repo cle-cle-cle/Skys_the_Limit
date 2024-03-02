@@ -288,7 +288,7 @@ value = 5
 [node name="HP_5_b4" parent="Grid" instance=ExtResource( 9 )]
 position = Vector2( 926, 606 )
 upgrade_type = 0
-value = 5
+value = 10
 
 [node name="Def_5_a" parent="Grid" instance=ExtResource( 9 )]
 position = Vector2( 416, 285 )
@@ -462,6 +462,22 @@ margin_left = 210.0
 margin_top = 284.0
 margin_right = 250.0
 margin_bottom = 298.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "1"
+
+[node name="Label34" type="Label" parent="Grid/CollapseOrder/1"]
+margin_left = 282.0
+margin_top = 286.0
+margin_right = 322.0
+margin_bottom = 300.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "1"
+
+[node name="Label35" type="Label" parent="Grid/CollapseOrder/1"]
+margin_left = 277.0
+margin_top = 350.0
+margin_right = 317.0
+margin_bottom = 364.0
 custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
 text = "1"
 

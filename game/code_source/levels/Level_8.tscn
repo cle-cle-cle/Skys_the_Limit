@@ -101,7 +101,6 @@ value = 100
 
 [node name="Bonus2" parent="Grid" instance=ExtResource( 9 )]
 position = Vector2( 606, 471 )
-upgrade_type = 0
 value = 30
 
 [node name="Stair" type="Node2D" parent="Grid"]
@@ -121,6 +120,14 @@ margin_left = 213.0
 margin_top = 474.0
 margin_right = 253.0
 margin_bottom = 488.0
+custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
+text = "1"
+
+[node name="Label12" type="Label" parent="Grid/CollapseOrder/1"]
+margin_left = 215.0
+margin_top = 348.0
+margin_right = 255.0
+margin_bottom = 362.0
 custom_colors/font_color = Color( 0, 0.627451, 0.266667, 1 )
 text = "1"
 

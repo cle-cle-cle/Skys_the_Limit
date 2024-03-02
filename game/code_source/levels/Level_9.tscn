@@ -88,7 +88,7 @@ position = Vector2( 608, 285 )
 texture = ExtResource( 10 )
 
 [node name="Actor" parent="Grid" instance=ExtResource( 2 )]
-position = Vector2( 608, 536 )
+position = Vector2( 608, 538 )
 
 [node name="PinkSlime" parent="Grid" instance=ExtResource( 11 )]
 position = Vector2( 607, 285 )
@@ -142,19 +142,23 @@ value = 10
 
 [node name="Bonus3" parent="Grid" instance=ExtResource( 9 )]
 position = Vector2( 733, 282 )
-value = 100
+upgrade_type = 2
+value = 900
 
 [node name="Bonus4" parent="Grid" instance=ExtResource( 9 )]
 position = Vector2( 731, 348 )
-value = 100
+upgrade_type = 3
+value = 900
 
 [node name="Bonus5" parent="Grid" instance=ExtResource( 9 )]
 position = Vector2( 474, 284 )
-value = 100
+upgrade_type = 3
+value = 900
 
 [node name="Bonus6" parent="Grid" instance=ExtResource( 9 )]
 position = Vector2( 473, 350 )
-value = 100
+upgrade_type = 2
+value = 900
 
 [node name="Bonus7" parent="Grid" instance=ExtResource( 9 )]
 position = Vector2( 797, 606 )

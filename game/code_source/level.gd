@@ -1,6 +1,5 @@
 extends Node
 
-var max_level = 10
 
 # Level and steps
 export var current_level = 0
@@ -17,7 +16,6 @@ var steps = [
 	[1, 10, 14, 16, 32], # level 7
 	[2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2], # level 8
 	[1,1,1,1,1], # level 9
-	[8, 4, 3, 4, 2], # level 10
 ]
 
 # Children
@@ -183,7 +181,6 @@ func update_labels():
 
 func _on_Actor_step_consumed():
 	$AudioWalk.play()
-	if current_level < 10: # don;t collapse ground for final level
 		remaining_steps -= 1
 		if remaining_steps == 0:
 			print("turn" + String(current_turn) + "over")

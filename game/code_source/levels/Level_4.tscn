@@ -101,7 +101,6 @@ value = 100
 
 [node name="Bonus2" parent="Grid" instance=ExtResource( 9 )]
 position = Vector2( 606, 471 )
-upgrade_type = 0
 value = 30
 
 [node name="Stair" type="Node2D" parent="Grid"]

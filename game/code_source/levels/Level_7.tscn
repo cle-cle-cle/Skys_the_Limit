@@ -103,35 +103,37 @@ enemy_type = 13
 [node name="GreenSlime18" parent="Grid" instance=ExtResource( 11 )]
 position = Vector2( 736, 477 )
 type = 3
+enemy_type = 12
 
 [node name="GreenSlime19" parent="Grid" instance=ExtResource( 11 )]
 position = Vector2( 674, 223 )
 type = 3
-enemy_type = 13
+enemy_type = 12
 
 [node name="GreenSlime20" parent="Grid" instance=ExtResource( 11 )]
 position = Vector2( 738, 354 )
 type = 3
+enemy_type = 12
 
 [node name="GreenSlime13" parent="Grid" instance=ExtResource( 11 )]
 position = Vector2( 484, 348 )
 type = 3
-enemy_type = 12
+enemy_type = 10
 
 [node name="GreenSlime14" parent="Grid" instance=ExtResource( 11 )]
 position = Vector2( 547, 350 )
 type = 3
-enemy_type = 12
+enemy_type = 10
 
 [node name="GreenSlime15" parent="Grid" instance=ExtResource( 11 )]
 position = Vector2( 547, 479 )
 type = 3
-enemy_type = 12
+enemy_type = 10
 
 [node name="GreenSlime16" parent="Grid" instance=ExtResource( 11 )]
 position = Vector2( 483, 477 )
 type = 3
-enemy_type = 12
+enemy_type = 10
 
 [node name="GreenSlime2" parent="Grid" instance=ExtResource( 11 )]
 position = Vector2( 419, 284 )
@@ -191,12 +193,12 @@ enemy_type = 14
 [node name="GreenSlime4" parent="Grid" instance=ExtResource( 11 )]
 position = Vector2( 419, 605 )
 type = 3
-enemy_type = 2
+enemy_type = 13
 
 [node name="GreenSlime10" parent="Grid" instance=ExtResource( 11 )]
 position = Vector2( 355, 606 )
 type = 3
-enemy_type = 2
+enemy_type = 13
 
 [node name="GreenSlime23" parent="Grid" instance=ExtResource( 11 )]
 position = Vector2( 353, 351 )
