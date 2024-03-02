@@ -28,7 +28,7 @@ func _process(_delta):
 #
 #func _unhandled_input(event):
 	# If player holds down move button, actor will slip
-	
+
 #	if is_input_in_cd :
 #		return
 #
@@ -38,13 +38,13 @@ func _process(_delta):
 	# Player Movement
 	var movement_dir := Vector2.ZERO
 	
-	if Input.is_action_pressed("game_up"):
+	if Input.is_action_just_pressed("game_up"):
 		movement_dir.y = -1
-	elif Input.is_action_pressed("game_down"):
+	elif Input.is_action_just_pressed("game_down"):
 		movement_dir.y = 1
-	elif Input.is_action_pressed("game_left"):
+	elif Input.is_action_just_pressed("game_left"):
 		movement_dir.x = -1
-	elif Input.is_action_pressed("game_right"):
+	elif Input.is_action_just_pressed("game_right"):
 		movement_dir.x = 1
 	
 #	if event is InputEventKey:
@@ -78,6 +78,7 @@ func update_look_direction(direction):
 
 func move_to(target_position):
 	set_process(false)
+	$AnimationPlayer.stop()
 	$AnimationPlayer.play("walk")
 
 	# Move the node to the target cell instantly,
